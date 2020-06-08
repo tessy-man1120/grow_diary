@@ -1,0 +1,9 @@
+<div class="content__title">
+  What's Learned Today？
+</div>
+
+<%= form_with model: @post, class: :form, local: true do |form| %>
+  <%= form.text_field :title, placeholder: :"Title", class: :form__title %>
+  <%= form.text_area :content, placeholder: :"What's new?", class: :form__text %>
+  <%= form.submit 'Post', class: :form__btn %>
+<% end %>
