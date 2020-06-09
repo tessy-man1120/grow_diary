@@ -6,10 +6,12 @@
 </div>
 <div class="postAuthor">
 </div>
-<div class="postManage">
-  <%= link_to "Edit", edit_post_path(@post.id), class: "postManage__edit" %>
-   <%= link_to "Delete", post_path(@post.id), method: :delete, class: "postManage__delete" %>
-</div>
-<div class="postText">
-  <%= simple_format @post.text %>
-</div>
+<% if user_signed_in? && current_user.id == @post.user_id %>
+  <div class="postManage">
+    <%= link_to "Edit", edit_post_path(@post.id), class: "postManage__edit" %>
+    <%= link_to "Delete", post_path(@post.id), method: :delete, class: "postManage__delete" %>
+  </div>
+<% end %>
+  <div class="postText">
+    <%= simple_format @post.text %>
+  </div>
