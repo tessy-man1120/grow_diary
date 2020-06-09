@@ -1,8 +1,5 @@
 class PostsController < ApplicationController
 
-  def top
-  end
-
   def index
     @posts = Post.includes(:user)
   end
@@ -13,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    redirect_to root_path
+    redirect_to posts_path
   end
 
   def show
@@ -27,13 +24,13 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    redirect_to post_path(post.id)
+    redirect_to posts_path(post.id)
   end
 
   def destroy
     post = Post.find(params[:id])
     post.destroy
-    redirect_to root_path
+    redirect_to posts_path
   end
 
   private

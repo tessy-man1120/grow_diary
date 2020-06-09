@@ -1,8 +1,11 @@
+
 body{
   background-color: #f6f6f6;
   min-width: 650px;
+  overflow: scroll;
   .header{
-    height: 56px;
+    opacity: 0.8;
+    height: 100px;
     width: 100%;
     padding: 0 150px;
     background-color: rgba(43, 174, 184, 0.959);
@@ -11,7 +14,7 @@ body{
     justify-content: space-between;
     &__title{
       font-size: 30px;
-      line-height: 56px;
+      line-height: 100px;
       &--text{
         text-decoration: none;
         color: #fff;
@@ -20,12 +23,13 @@ body{
     &__right{
       &--btn{
         text-decoration: none;
-        line-height: 56px;
+        line-height: 100px;
         color: #fff;
         margin-left:15px;
       }
     }
   }
+
   .contents{
     margin: 30px auto 0;
     background-color: #fff;
