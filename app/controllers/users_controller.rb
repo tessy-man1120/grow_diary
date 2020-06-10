@@ -6,7 +6,20 @@ class UsersController < ApplicationController
   end
 
   def index
-    @user = User.find(params[:id])
+    @user = User.all
+    # @user = User.find(params[:id])
+  end
+
+  # def create
+  #   @new_image = User.new(user_params)
+  #   if @new_image.save
+  #     redirect_to users_url
+  #   else
+  #     render action: :index
+  #   end
+  # end
+
+  def update
   end
 
 end

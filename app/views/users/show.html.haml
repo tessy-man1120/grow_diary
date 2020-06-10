@@ -1,12 +1,15 @@
 .postTitle
-  = @user.nickname
+  = @user.nickname 
   のマイページ
 .userInfo
   .userInfo__image-box
-  = @user.image
+  = image_tag @user.image_url if @user.image?
   .userInfo__prof-box
   = @user.profile
 .show-link-box
-  = link_to "GoToPosts"
-.link-box
-  = link_to "EditProfile"
+  = link_to "GoTo Posts", posts_path
+- if user_signed_in? && current_user.id == @user.id
+  .link-box
+    = link_to "Edit Profile", edit_user_registration_path
+
+
