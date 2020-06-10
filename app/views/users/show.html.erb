@@ -1,7 +1,0 @@
-<div class="postTitle">
-  <%= @user.nickname %>の積み上げ
-</div>
-<% @posts.each do |post| %>
-  <%= render partial: "posts/post", locals: { post: post } %>
-
-<% end %>

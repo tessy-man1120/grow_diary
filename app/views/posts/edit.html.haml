@@ -1,0 +1,6 @@
+.content__title
+  投稿の編集
+= form_with model: @post, class: :form, local: true do |form|
+  = form.text_field :title, placeholder: :タイトル, class: :form__title
+  = form.text_area :text, placeholder: :本文, class: :form__text
+  = form.submit 'Post', class: :form__btn

@@ -1,0 +1,12 @@
+.postTitle
+  = @user.nickname
+  のマイページ
+.userInfo
+  .userInfo__image-box
+  = @user.image
+  .userInfo__prof-box
+  = @user.profile
+.show-link-box
+  = link_to "GoToPosts"
+.link-box
+  = link_to "EditProfile"

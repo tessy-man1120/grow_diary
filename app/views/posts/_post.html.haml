@@ -1,0 +1,11 @@
+.content
+  .content__left
+    .content__left--image
+  .content__right
+    .content__right__top
+      = link_to post.title, post_path(post.id), class: "content__right__top--title"
+    .content__right__bottom
+      .content__right__bottom--userName
+        = link_to post.user.nickname, user_path(post.user), class: "content__right__bottom--userName--btn"
+      .content__right__bottom--date
+        = post.created_at

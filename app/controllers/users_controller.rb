@@ -5,4 +5,8 @@ class UsersController < ApplicationController
     @posts = @user.posts
   end
 
+  def index
+    @user = User.find(params[:id])
+  end
+
 end
