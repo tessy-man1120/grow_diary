@@ -101,9 +101,34 @@ body{
       height: 500px;
       border: 2px solid gray;
     }
-
-    
+    .postTag{
+      width: 90%;
+      height: 50px;
+      margin: auto;
+      .tagItem {
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        width: 70px;
+        height: 40px;
+        background-color: rgb(240, 166, 205);
+        border-radius: 10px;
+        margin: 0 5px;
+        padding: 5px 3px;
+      }
+    }
   }
+
+  .form-group {
+    display: flex;
+    margin: 20px 0;
+  }
+
+  .form-check {
+    margin-left: 5px;
+  }
+
+
   .form{
     width: 85%;
     height: 100%;
@@ -163,4 +188,21 @@ body{
 }
 .comment-send-btn {
   width: 30%;
+}
+
+// 検索フォームCSS
+.search-form {
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  .search-input {
+    width: 60%;
+    height: 50px;
+  }
+  .search-btn {
+    font-size: 20px;
+    margin-left: 40px;
+    width: 100px;
+    height: 50px;
+  }
 }

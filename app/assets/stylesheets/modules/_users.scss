@@ -1,15 +1,46 @@
-
-
 .user-info {
-  background: rgb(128, 170, 149);
   height: 500px;
   text-align: center;
   font-size: 20px;
+  &__box {
+    height: 100px;
+    width: 80%;
+    line-height: 100px;
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(63, 59, 52, 0.178);
+    border: 2px solid gray;
+  }
 }
+
 .image-cover {
-  margin: auto;
-  width: 30%;
-  border: 2px solid blue;
+  margin: 10px auto;
+  width: 40%;
+  border: 2px solid gray;
   padding: 5px;
   background-color: white;
+}
+
+.profile-box {
+  padding: 30px 5px;
+  height: 200px;
+  font-size: 18px;
+}
+
+.fas fa-book-reader icon {
+  color: white;
+}
+
+.link-cover {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-box {
+  list-style: none;
+  text-decoration: none;
+  color: olivedrab;
+  font-size: 25px;
+  margin-bottom: 50px;
 }
