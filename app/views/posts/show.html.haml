@@ -1,6 +1,7 @@
 .postTitle
   = @post.title
 .postDate
+  -# = @user.image
   = @post.created_at
 .postAuthor
 - if user_signed_in? && current_user.id == @post.user_id
@@ -9,6 +10,9 @@
     = link_to "Delete", post_path(@post.id), method: :delete, class: "postManage__delete"
 .postText
   = simple_format @post.text
+.postTag
+  - @post.tags.each do |tag|
+    %span.tagItem= tag.name
 
 .container
   .form-box

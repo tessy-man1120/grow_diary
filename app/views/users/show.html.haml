@@ -1,24 +1,22 @@
 .postTitle
   = @user.nickname 
-  のマイページ
+  's Profile
 .prof-cover
   .user-info
     .user-info__box
-    = @user.nickname
-    's Profile Picture
+      Profile Picture
     %br/
     .image-cover
       = image_tag @user.image_url if @user.image?
     .user-info__box
-    = @user.nickname
-    's profile
-    %br/
-    = @user.profile
-    .link-box
-    = @user.nickname
-    's Posts
-    %br/
-    = link_to "GoTo Posts", posts_path
-    - if user_signed_in? && current_user.id == @user.id
+      Profile
+    .profile-box
+      = @user.profile
+    .link-cover
       .link-box
-        = link_to "Edit Profile", edit_user_registration_path
+        = icon("fas", "book-reader", class: "icon")
+        = link_to "GoTo Posts", posts_path
+      - if user_signed_in? && current_user.id == @user.id
+        .link-box
+          = icon("fas", "user-edit", class: "icon")
+          = link_to "Edit Profile", edit_user_registration_path
