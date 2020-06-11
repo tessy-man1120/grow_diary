@@ -1,15 +1,24 @@
 .postTitle
   = @user.nickname 
   のマイページ
-.userInfo
-  .userInfo__image-box
-  = image_tag @user.image_url if @user.image?
-  .userInfo__prof-box
-  = @user.profile
-.show-link-box
-  = link_to "GoTo Posts", posts_path
-- if user_signed_in? && current_user.id == @user.id
-  .link-box
-    = link_to "Edit Profile", edit_user_registration_path
-
-
+.prof-cover
+  .user-info
+    .user-info__box
+    = @user.nickname
+    's Profile Picture
+    %br/
+    .image-cover
+      = image_tag @user.image_url if @user.image?
+    .user-info__box
+    = @user.nickname
+    's profile
+    %br/
+    = @user.profile
+    .link-box
+    = @user.nickname
+    's Posts
+    %br/
+    = link_to "GoTo Posts", posts_path
+    - if user_signed_in? && current_user.id == @user.id
+      .link-box
+        = link_to "Edit Profile", edit_user_registration_path
