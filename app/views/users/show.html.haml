@@ -15,7 +15,7 @@
     .link-cover
       .link-box
         = icon("fas", "book-reader", class: "icon")
-        = link_to "GoTo Posts", posts_path
+        = link_to "GoTo Posts", users_path(params[:id])
       - if user_signed_in? && current_user.id == @user.id
         .link-box
           = icon("fas", "user-edit", class: "icon")

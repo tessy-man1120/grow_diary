@@ -1,16 +1,22 @@
 .header{
+  font-family: 'Silom',sans-serif;
   opacity: 0.9;
   height: 100px;
   width: 100%;
   padding: 0 150px;
-  background-color: rgba(43, 174, 184, 0.959);
+  background-color: rgb(58, 54, 54);
   color: #fff;
   display: flex;
   justify-content: space-between;
-  border-bottom: 15px solid rgba(191, 230, 169, 0.5);
+  border-bottom: 15px solid black;
   &__title{
     font-size: 30px;
     line-height: 100px;
+    transition: all 0.1s;
+    &:hover{
+      color:black;
+      letter-spacing: 1.5px;
+    }
     &--text{
       text-decoration: none;
       color: #fff;

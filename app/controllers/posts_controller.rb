@@ -8,6 +8,11 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    if @post.save
+      redirect_to posts_path
+    else
+      # redirect_to new_post_path
+    end
   end
 
   def create
@@ -44,6 +49,10 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :text, :image, tag_ids: []).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end

@@ -1,9 +1,18 @@
 .content__title
-  投稿の編集
+  Edit Post
 = form_with model: @post, class: :form, local: true do |form|
-  = form.text_field :title, placeholder: :タイトル, class: :form__title
-  = form.text_area :text, placeholder: :本文, class: :form__text
-  = form.submit 'Post', class: :form__btn
+  = form.text_field :title, placeholder: :"Title", class: :form__title
+  = form.text_area :text, placeholder: :"What's new?", class: :form__text
+  .form-tag
+  %h2 Check Tags
+  = form_for @post do |f|
+    .form-group
+      = f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag|
+        .form-check
+          = tag.label class: 'form-check-label' do
+            = tag.check_box class: 'form-check-input'
+            = tag.text
+    = form.submit 'Post', class: :form__btn
 
--# :javascript
--#   new FroalaEditor('.form__text', {});
+:javascript
+  new FroalaEditor('.form__text', {});

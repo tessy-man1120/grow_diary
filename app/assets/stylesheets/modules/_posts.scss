@@ -1,5 +1,7 @@
 
+
 body{
+  font-family: 'Silom',sans-serif;
   background-color: #f6f6f6;
   min-width: 650px;
   overflow: scroll;
@@ -20,6 +22,10 @@ body{
           width: 55px;
           border: solid 1px;
         }
+        .sml-img{
+          height: 100%;
+          width:100%;
+        }
       }
       &__right{
         width: calc(100%-100px);
@@ -29,20 +35,26 @@ body{
           &--title{
             text-decoration: none;
             color: #000000;
+            transition: all 0.1s;
+            &:hover{
+              color:red;
+              font-size: 23px;
+            }
           }
         }
         &__bottom{
           font-size: 15px;
           color: #999;
-          display: flex;
           &--userName{
             &--btn{
               text-decoration: none;
-              color: #999;
+              color: navy;
+              transition: all 0.1s;
+            &:hover{
+              color:red;
+              font-size: 18px;
             }
-          }
-          &--date{
-            margin-left: 20px;
+            }
           }
         }
       }
@@ -96,10 +108,12 @@ body{
       }
     }
     .postText{
-      margin: 20px 30px;
-      text-align: center;
-      height: 500px;
+      margin: 10px 30px;
+      padding: 0 10px;
+      height: 100vh;
       border: 2px solid gray;
+      overflow: scroll;
+      
     }
     .postTag{
       width: 90%;
@@ -155,54 +169,7 @@ body{
     padding: 15px 30px;
   }
 }
-
-.container {
-  width: 100%;
-  height: 800px;
-  // overflow: scroll;
-  text-align: center;
-}
-
-.comments {
-   background-color: rgba(43, 174, 184, 0.959);
-   margin: 50px;
-   height: 500px;
-  //  overflow: scroll;
-   border: 2px solid gray;
-  &__title {
-    background-color: white;
-    height: 50px;
-    // line-height: 50px;
-    margin: 20px 50px;
-    border: 1px solid gray;
-  }
-  &__text {
-    background-color: white;
-    margin: 0 50px;
-    border: 1px solid gray;
-  }
-}
-#comment_text {
-  width: 90%;
-  margin: 30px 0;
-}
-.comment-send-btn {
-  width: 30%;
-}
-
-// 検索フォームCSS
-.search-form {
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-  .search-input {
-    width: 60%;
-    height: 50px;
-  }
-  .search-btn {
-    font-size: 20px;
-    margin-left: 40px;
-    width: 100px;
-    height: 50px;
-  }
+// フローラ入力ボックス
+.fr-box {
+  margin-top: 50px;
 }

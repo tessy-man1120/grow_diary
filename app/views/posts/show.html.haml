@@ -1,8 +1,7 @@
 .postTitle
   = @post.title
 .postDate
-  -# = @user.image
-  = @post.created_at
+  = @post.created_at.strftime('%Y/%m/%d %H:%M') 
 .postAuthor
 - if user_signed_in? && current_user.id == @post.user_id
   .postManage
@@ -14,24 +13,28 @@
   - @post.tags.each do |tag|
     %span.tagItem= tag.name
 
+.comments
+  .comments__title
+    %h3 ＜ Comments ＞
+  - if @comments
+    - @comments.each do |comment|
+      .comments__text
+        %p
+          = link_to comment.user.nickname, "/users/#{comment.user_id}"
+          ：
+          = comment.text
+        .comments__text__time
+          = comment.created_at.strftime('%Y/%m/%d %H:%M')
+
 .container
-  .form-box
-    - if current_user
-      = form_with(model: [@post, @comment], local: true) do |form|
-        = form.text_area :text, placeholder: "Comment", rows: "10"
-        = form.submit "SEND", class: "comment-send-btn"
-    - else
-      %strong
-        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
-  .comments
-    .comments__title
-      %h4 ＜Comments To You＞
-    - if @comments
-      - @comments.each do |comment|
-        .comments__text
-          %p
-            %strong
-              = link_to comment.user.nickname, "/users/#{comment.user_id}"
-              ：
-            = comment.text
-  
+  .form-title
+    Comment Send Box
+    .form-box
+      - if current_user
+        = form_with(model: [@post, @comment], local: true) do |form|
+          = form.text_area :text, placeholder: "Type a Comment", rows: "10"
+          = form.submit "SEND", class: "comment-send-btn"
+      - else
+        %strong
+          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+

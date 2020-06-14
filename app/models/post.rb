@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-  # validates :title, :text, presence: true
+  validates :title, presence: true
+
   belongs_to :user
   has_many :comments
   has_many :post_tag_relations, dependent: :destroy
