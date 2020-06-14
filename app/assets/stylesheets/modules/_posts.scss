@@ -163,6 +163,7 @@ body{
       display: block;
       width: 30%;
       margin: 15px auto 0;
+      border-radius: 5px;
     }
   }
   .user{
@@ -172,4 +173,20 @@ body{
 // フローラ入力ボックス
 .fr-box {
   margin-top: 50px;
+}
+// タグ遷移ボックス
+.tag-index__link {
+  height: 40px;
+  width: 150px;
+  margin-left: 130px;
+  list-style: none;
+  border-radius: 5px;
+  transition: all 0.1s;
+  &:hover{
+    background-color:rgb(135, 182, 155);
+  }
+}
+.tag-link{
+  text-decoration: none;
+  color: black;
 }

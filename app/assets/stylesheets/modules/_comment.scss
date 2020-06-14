@@ -13,7 +13,7 @@
     padding-left: 10px;
     background-color: white;
     margin: 5px 30px;
-    border: 1px solid gray;
+    border-bottom: 1px solid gray;
   }
   
 }
@@ -26,7 +26,11 @@
   width: 90%;
   margin: 30px 0;
 }
-.comment-send-btn {
+.form__submit {
   width: 30%;
   margin-bottom: 50px;
 }
+
+// = form_with(model: [@post, @comment], local: true) do |form|
+// = form.text_area :text, placeholder: "Type a Comment", rows: "10"
+// = form.submit "SEND", class: "comment-send-btn"

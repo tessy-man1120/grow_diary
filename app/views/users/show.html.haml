@@ -15,8 +15,10 @@
     .link-cover
       .link-box
         = icon("fas", "book-reader", class: "icon")
-        = link_to "GoTo Posts", users_path(params[:id])
+        %buttun.link-box__btn
+          = link_to "GoTo Posts", users_path(params[:id]), class: "btn-text"
       - if user_signed_in? && current_user.id == @user.id
         .link-box
           = icon("fas", "user-edit", class: "icon")
-          = link_to "Edit Profile", edit_user_registration_path
+          %buttun.link-box__btn
+            = link_to "Edit Profile", edit_user_registration_path, class: "btn-text"

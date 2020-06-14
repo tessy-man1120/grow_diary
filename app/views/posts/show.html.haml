@@ -31,9 +31,9 @@
     Comment Send Box
     .form-box
       - if current_user
-        = form_with(model: [@post, @comment], local: true) do |form|
-          = form.text_area :text, placeholder: "Type a Comment", rows: "10"
-          = form.submit "SEND", class: "comment-send-btn"
+        = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
+          = form.text_area :text, placeholder: "Type a Comment", rows: "10", class: "textbox"
+          = form.submit "SEND", class: "form__submit"
       - else
         %strong
           %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
