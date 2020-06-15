@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
-
   root to: 'top#index'
   resources :posts do 
     resources :comments, only: :create
@@ -10,6 +9,6 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :index]
-  resources :tags
+  resources :tags, only: [:index, :show]
 
 end

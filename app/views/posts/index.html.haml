@@ -4,6 +4,8 @@
 .tag-index
   %button.tag-index__link
     = link_to "Search Tags", tags_path, class: "tag-link"
+.pagination-box
+  = paginate(@posts)
 - @posts.each do |post|
   .content
     .content__left

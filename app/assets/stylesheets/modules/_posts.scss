@@ -113,7 +113,6 @@ body{
       height: 100vh;
       border: 2px solid gray;
       overflow: scroll;
-      
     }
     .postTag{
       width: 90%;
@@ -189,4 +188,12 @@ body{
 .tag-link{
   text-decoration: none;
   color: black;
+}
+
+.pagination-box {
+  text-align: center;
+  margin: 10px 0;
+  .pagination {
+    text-decoration: none;
+  }
 }
