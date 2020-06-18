@@ -11,6 +11,7 @@
     .content__left
       .content__left--image
         設定中
+        -# = image_tag @user.image_url if @user.image?
     .content__right
       .content__right__top
         = link_to post.title, post_path(post.id), class: "content__right__top--title"
