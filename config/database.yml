@@ -49,6 +49,13 @@ test:
 #
 production:
   <<: *default
-  database: grow_diary_production
-  username: grow_diary
-  password: <%= ENV['GROW_DIARY_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+
+
+
+  # database: grow_diary_production
+  # username: grow_diary
+  # password: <%= ENV['GROW_DIARY_DATABASE_PASSWORD'] %>
