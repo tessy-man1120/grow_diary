@@ -1,0 +1,54 @@
+.contents {
+  margin: 30px auto 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 80%;
+  .content {
+    padding: 10px;
+    border-bottom: 0.5px solid #adadad ;
+    display: flex;
+    &__left {
+      padding-right: 20px;
+      &--image{
+        height: 55px;
+        width: 55px;
+        border: solid 1px;
+      }
+      .sml-img {
+        height: 100%;
+        width:100%;
+      }
+    }
+    &__right {
+      width: calc(100%-100px);
+      &__top {
+        font-size: 20px;
+        font-weight: bold;
+        &--title{
+          text-decoration: none;
+          color: #000000;
+          transition: all 0.1s;
+          &:hover{
+            color:#0B74AF;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      &__bottom {
+        font-size: 16px;
+        color: #999;
+        &--userName {
+          &--btn{
+            text-decoration: none;
+            color: black;
+            transition: all 0.1s;
+          &:hover {
+            color:#0B74AF;
+            letter-spacing: 0.8px;
+          }
+          }
+        }
+      }
+    }
+  }
+}

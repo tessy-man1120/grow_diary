@@ -1,0 +1,24 @@
+.main-intro
+  .top-message
+    %h2 MyGrowDairy
+    .text
+      %p 毎日の積み上げを記録しよう
+
+.main-contents
+  .lessons
+    .lessons__item
+      = icon("fas", "calendar", class: "icon")
+      %h2 Diary
+      %br
+      %p 毎日の学習記録を残そう
+    .lessons__item
+      = icon("fas", "comment", class: "icon")
+      %h2 Comment
+      %br
+      %p 頑張る人を応援しよう
+    .lessons__item
+      = icon("fas", "tag", class: "icon")
+      %h2 Tag
+      %br
+      %p 仲間と情報を共有しよう
+= render "top/footer"

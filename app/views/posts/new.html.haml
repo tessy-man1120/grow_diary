@@ -1,5 +1,3 @@
-.content__title
-  What's Learned Today？
 = form_with model: @post, class: :form, local: true do |form|
   = form.text_field :title, placeholder: :"Title", class: :form__title
   = form.text_area :text, placeholder: :"What's new?", class: :form__text
@@ -12,7 +10,7 @@
           = tag.label class: 'form-check-label' do
             = tag.check_box class: 'form-check-input'
             = tag.text
-    = form.submit 'Post', class: :form__btn
+    = form.submit 'Post', class: :form__postBtn
   
 :javascript
   new FroalaEditor('.form__text', {});

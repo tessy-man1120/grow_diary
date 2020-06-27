@@ -4,31 +4,26 @@
   height: 100px;
   width: 100%;
   padding: 0 150px;
-  background-color: rgb(58, 54, 54);
-  color: #fff;
+  background-color: #A0A0A0;
   display: flex;
   justify-content: space-between;
   border-bottom: 15px solid black;
   &__title{
+    display: block;
     font-size: 30px;
     line-height: 100px;
     transition: all 0.1s;
-    &:hover{
-      color:black;
-      letter-spacing: 1.5px;
-    }
     &--text{
       text-decoration: none;
-      color: #fff;
+      color: black;
     }
   }
   &__right{
     &--btn{
       text-decoration: none;
       line-height: 100px;
-      color: #fff;
+      color: #313131;
       margin-left:15px;
     }
   }
 }
-

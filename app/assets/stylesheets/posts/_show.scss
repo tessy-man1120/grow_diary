@@ -1,0 +1,138 @@
+.postShow-contents {
+  width: 80%;
+  margin: auto;
+  .postTitle {
+    padding: 50px 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+  }
+  .postDate {
+    padding: 20px 0;
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+  }
+  .postAuthor {
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+  }
+  .postManage {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    &__edit{
+      display: block;
+      border-radius: 4px;
+      color: #fff;
+      padding: 0 10px;
+      text-decoration: none;
+      margin-right: 10px;
+      background-color:#0B74AF;
+      color: #fff;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+    &__delete{
+      display: block;
+      border-radius: 4px;
+      color: #fff;
+      padding: 0 10px;
+      text-decoration: none;
+      margin-left: 10px;
+      background-color:#0B74AF;
+      color: #fff;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+  .postText{
+    margin: 10px;
+    padding: 0 10px;
+    // height: 100vh;
+    background-color: white;
+    // border-top: 1px solid gray;
+    // border-bottom: 1px solid gray;
+    overflow: scroll;
+  }
+  .postTag{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    .tagItem {
+      color: white;
+      text-align: center;
+      line-height: 40px;
+      width: 70px;
+      height: 40px;
+      background-color: rgb(240, 166, 205);
+      border-radius: 10px;
+      margin: 0 5px;
+      padding: 5px 3px;
+    }
+  }
+}
+.form-group {
+display: flex;
+margin: 20px 0;
+}
+
+.form-check {
+margin-left: 5px;
+}
+
+.form{
+  width: 80%;
+  height: 100%;
+  margin: 40px auto 0 auto;
+  padding-top: 40px;
+  &__title{
+    display: block;
+    width: 100%;
+    height: 56px;
+  }
+  &__text{
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin-top: 15px;
+  }
+  &__postBtn{
+    display: block;
+    height: 48px;
+    width: 40%;
+    margin: 15px auto 0;
+    border-radius: 4px;
+    background-color:#0B74AF;
+    color: #fff;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
+
+// // これなに？
+// .user{
+//   padding: 15px 30px;
+// }
+
+// フローラ入力ボックス
+.fr-box {
+margin-top: 50px;
+}
+// タグ遷移ボックス
+.tag-link{
+text-decoration: none;
+color: black;
+}
+.pagination-box {
+text-align: center;
+margin: 10px 0;
+.pagination {
+  text-decoration: none;
+}
+}
