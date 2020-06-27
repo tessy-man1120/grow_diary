@@ -1,0 +1,28 @@
+.footer {
+  background-image: url("https://more-hikkoshi.com/wp-content/uploads/2015/04/img_noce00.png");
+  background-size: auto;
+  .cover {
+  height: 280px;
+  width: 100%;
+  opacity: 0.8;
+  background-color: gray;
+  border-top: 20px solid black;
+  }
+}
+.company {
+  font-family: 'Silom',sans-serif;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  .company-logo {
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    transition: all 0.5s;
+    &:hover{
+      color: #0B74AF;
+      font-weight: bold;
+    }
+  }
+}

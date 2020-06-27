@@ -1,0 +1,37 @@
+.edit-contents{
+  font-size: 18px;
+}
+.edit-content__nickname,
+.edit-content__image,
+.edit-content__email,
+.edit-content__profile {
+  border-bottom: 1px solid gray;
+  width: 80%;
+  margin: auto;
+}
+
+.user_nickname-box,
+.user_email-box {
+  padding: 10px 10px;
+  font-size: 16px;
+  width: 320px;
+}
+
+#user_profile {
+  width: 68%;
+  height: 200px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.users-update-btn{
+  width: 36%;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color:#0B74AF;
+  color: #fff;
+  &:hover{
+    opacity: 0.8;
+  }
+}

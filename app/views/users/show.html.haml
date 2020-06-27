@@ -1,4 +1,4 @@
-.postTitle
+.content-title
   = @user.nickname 
   's Profile
 .prof-cover
@@ -7,7 +7,11 @@
       Profile Picture
     %br/
     .image-cover
-      = image_tag @user.image_url if @user.image?
+      - if @user.image?
+        = image_tag @user.image_url
+      - else
+        %image.icon{alt: "ユーザーアイコン", src: "/assets/default.png"}
+      -# = image_tag @user.image_url if @user.image?
     .user-info__box
       Profile
     .profile-box

@@ -1,21 +1,22 @@
-.postTitle
-  = @post.title
-.postDate
-  = @post.created_at.strftime('%Y/%m/%d %H:%M') 
-.postAuthor
-- if user_signed_in? && current_user.id == @post.user_id
-  .postManage
-    = link_to "Edit", edit_post_path(@post.id), class: "postManage__edit"
-    = link_to "Delete", post_path(@post.id), method: :delete, class: "postManage__delete"
-.postText
-  = simple_format @post.text
-.postTag
-  - @post.tags.each do |tag|
-    %span.tagItem= tag.name
+.postShow-contents
+  .postTitle
+    = @post.title
+  .postDate
+    = @post.created_at.strftime('%Y/%m/%d %H:%M') 
+  .postAuthor
+  - if user_signed_in? && current_user.id == @post.user_id
+    .postManage
+      = link_to "Edit", edit_post_path(@post.id), class: "postManage__edit"
+      = link_to "Delete", post_path(@post.id), method: :delete, class: "postManage__delete"
+  .postText
+    = simple_format @post.text
+  .postTag
+    - @post.tags.each do |tag|
+      %span.tagItem= tag.name
 
 .comments
   .comments__title
-    %h3 ＜ Comments ＞
+    %h4 Comments
   - if @comments
     - @comments.each do |comment|
       .comments__text
@@ -28,7 +29,7 @@
 
 .container
   .form-title
-    Comment Send Box
+    %h4 Comment Send Box
     .form-box
       - if current_user
         = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|

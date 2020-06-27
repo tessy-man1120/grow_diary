@@ -1,25 +1,22 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.signup-contents
+  .content-title
+    Sign Up
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .signup-content
+        = render "devise/shared/error_messages", resource: resource
+        .signup-field
+          = f.label :nickname, class:"user-login-sentence"
+          = f.text_field :nickname, placeholder:"nickname", autofocus: true, autocomplete: "nickname"
+        .signup-field
+          = f.label :email, class:"user-login-sentence"
+          = f.email_field :email, placeholder:"aaa@gmail.com", autofocus: true, autocomplete: "email"
+        .signup-field
+          = f.label :password, class:"user-login-sentence"
+          - if @minimum_password_length
+            %em
+          = f.password_field :password, placeholder:"At least 6 characters",autocomplete: "new-password"
+        .signup-field
+          = f.label :Confirmation, class:"user-login-sentence"
+          = f.password_field :password_confirmation, placeholder:"Enter the same again",autocomplete: "new-password"
+        .actions
+          = f.submit "Sign up", class:"registrations-btn"

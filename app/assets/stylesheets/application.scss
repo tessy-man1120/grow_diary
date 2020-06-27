@@ -1,17 +1,22 @@
 @import "reset";
-@import "modules/header";
-@import "modules/top";
-@import "modules/posts";
-@import "modules/search";
-@import "modules/comment";
-@import "modules/events";
-@import "modules/users";
-
-// fontawesome
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-// frola
+@import "tops/main";
+@import "tops/header";
+@import "tops/footer";
+
+@import "posts/post";
+@import "posts/show";
+@import "posts/search";
+@import "posts/comment";
+
+@import "users/user";
+@import "users/signup";
+@import "users/login";
+@import "users/edit";
+
+
 @import "froala_editor.min";
 @import "froala_style.min";
 @import 'plugins/char_counter.min.css';

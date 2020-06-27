@@ -1,31 +1,33 @@
+.content-title{
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  line-height: 100px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
 .user-info {
   height: 500px;
   text-align: center;
-  font-size: 20px;
   &__box {
-    height: 100px;
+    height: 80px;
     width: 80%;
-    line-height: 100px;
-    margin: 20px auto;
-    font-size: 20px;
+    line-height: 80px;
+    margin: 10px auto;
+    font-size: 16px;
     font-weight: bold;
-    background-color: rgba(63, 59, 52, 0.178);
-    border: 2px solid gray;
+    border-bottom: 1px solid gray;
   }
 }
 
-.image-cover {
-  margin: 10px auto;
-  width: 40%;
-  border: 2px solid gray;
-  padding: 5px;
-  background-color: white;
-}
-
 .profile-box {
-  padding: 30px 5px;
+  padding: 20px 4px;
   height: 200px;
+  width: 80%;
+  margin: 0 auto 20px auto;
   font-size: 18px;
+  border-bottom: 1px solid gray;
 }
 
 .fas fa-book-reader icon {
@@ -40,7 +42,7 @@
 .link-box {
   list-style: none;
   text-decoration: none;
-  color: olivedrab;
+  color: #0B74AF;
   font-size: 25px;
   margin-bottom: 50px;
 }

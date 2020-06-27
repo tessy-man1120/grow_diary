@@ -1,8 +1,7 @@
 class TopController < ApplicationController
-  # before_action :, {only: [:top]}
+  # before_action :require_login, only: [:new, :index]
 
   def index
-    render layout: "top_page"
   end
 
 end

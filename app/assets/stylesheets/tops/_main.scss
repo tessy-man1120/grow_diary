@@ -1,0 +1,58 @@
+body{
+  background-color: #f1f1f1;
+  min-width: 650px;
+  overflow: scroll;
+  .main-intro {
+    font-family: 'Silom',sans-serif;
+    color: white;
+    height: 800px;
+    text-align: center;
+    font-size: 60px;
+    padding: 240px 20px;
+    background-image: url("https://www.canva.com/ja_jp/learn/wp-content/uploads/sites/10/2019/05/can62_main.jpg");
+    background-size: cover;
+    .top-message {
+      letter-spacing: 5.5px;
+      transition: all 0.5s;
+      &:hover{
+        color: #0B74AF;
+        letter-spacing: 16px;
+      }
+      .text {
+        font-size: 30px;
+        color:#fff;
+      }
+    }
+  }
+  .main-contents {
+    font-family: 'Silom',sans-serif;
+    margin: auto;
+    background-color: #A0A0A0;
+    height: 600px;
+    width: 90%;
+    }
+  .lessons{
+    display: flex;
+    justify-content: space-around;
+    &__item{
+      background-color: #fff;
+      opacity: 0.8;
+      padding: 10px;
+      width: 30%;
+      height: 600px;
+      text-align: center;
+      transition: all 0.5s;
+      &:hover{
+        background-color: #0B74AF;
+      }
+    }
+    .icon {
+      padding: 50px 0;
+      font-size: 100px;
+      transition: all 0.5s;
+      &:hover{
+        font-size: 120px;
+      }
+    }
+  }
+}
