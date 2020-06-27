@@ -10,6 +10,7 @@
 @import "posts/show";
 @import "posts/search";
 @import "posts/comment";
+@import "posts/tag";
 
 @import "users/user";
 @import "users/signup";
@@ -17,17 +18,4 @@
 @import "users/edit";
 
 
-@import "froala_editor.min";
-@import "froala_style.min";
-@import 'plugins/char_counter.min.css';
-@import 'plugins/code_view.min.css';
-@import 'plugins/colors.min.css';
-@import 'plugins/emoticons.min.css';
-@import 'plugins/file.min.css';
-@import 'plugins/fullscreen.min.css';
-@import 'plugins/image_manager.min.css';
-@import 'plugins/image.min.css';
-@import 'plugins/line_breaker.min.css';
-@import 'plugins/quick_insert.min.css';
-@import 'plugins/table.min.css';
-@import 'plugins/video.min.css';
+

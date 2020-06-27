@@ -1,8 +1,8 @@
-.content__title
-  Edit Post
+.edit-sign-box
+  %h2 While editing...
 = form_with model: @post, class: :form, local: true do |form|
   = form.text_field :title, placeholder: :"Title", class: :form__title
-  = form.text_area :text, placeholder: :"What's new?", class: :form__text
+  = form.text_area :text, placeholder: :"Text", class: :form__text
   .form-tag
   %h2 Check Tags
   = form_for @post do |f|
@@ -15,4 +15,4 @@
     = form.submit 'RePost', class: :form__postBtn
 
 :javascript
-  new FroalaEditor('.form__text', {});
+  var easyMDE = new EasyMDE({element: $('.text_area')[0]});

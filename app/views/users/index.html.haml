@@ -5,8 +5,6 @@
       's ALL POSTS
     - @posts.each do |post|
       .content
-        .content__left
-          .content__left--image
         .content__right
           .content__right__top
             = link_to post.title, post_path(post.id), class: "content__right__top--title"
