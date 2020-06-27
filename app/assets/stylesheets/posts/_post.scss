@@ -16,7 +16,7 @@
       }
       .sml-img {
         height: 100%;
-        width:100%;
+        width: 100%;
       }
     }
     &__right {
@@ -51,4 +51,13 @@
       }
     }
   }
+}
+.edit-sign-box {
+  margin: -20px auto 20px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #0B74AF;
+  opacity: 0.8;
+  color: #fff;
 }

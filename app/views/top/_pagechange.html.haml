@@ -1,0 +1,11 @@
+-# 新規投稿とログイン前は消しておく
+- if user_signed_in?
+  .sendBtn 
+  = link_to "/posts/new", class:"sendBtn" do
+    NewPost
+    = icon("fas", "pen-square", class: "pen-icon")
+- else
+  .regBtn 
+  = link_to "/users/sign_up", class:"regBtn" do
+    New Account
+    = icon("fas", "user", class: "user-icon")

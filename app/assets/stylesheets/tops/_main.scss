@@ -56,3 +56,52 @@ body{
     }
   }
 }
+
+// 新規投稿画面の遷移ボタン
+.sendBtn {
+  z-index: 1;
+  text-align: center;
+  display: block;
+  position: fixed;
+  height: 120px;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #0B74AF;
+  color: #fff;
+  bottom:  120px;
+  right: 40px;
+  padding: 4px;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+  .pen-icon {
+    display: block;
+    color: #fff;
+    font-size: 80px;
+  }
+}
+.regBtn {
+  z-index: 1;
+  text-align: center;
+  display: block;
+  position: fixed;
+  height: 120px;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #1B8787;
+  color: #fff;
+  top:  480px;
+  right: 80px;
+  padding: 4px;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+  .user-icon {
+    padding-top: 8px;
+    display: block;
+    color: #fff;
+    font-size: 60px;
+  }
+}

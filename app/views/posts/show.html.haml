@@ -16,7 +16,7 @@
 
 .comments
   .comments__title
-    %h4 Comments
+    %h4 Comments for this post
   - if @comments
     - @comments.each do |comment|
       .comments__text
@@ -29,7 +29,7 @@
 
 .container
   .form-title
-    %h4 Comment Send Box
+    %h4 Input Comment
     .form-box
       - if current_user
         = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
@@ -39,3 +39,7 @@
         %strong
           %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
+
+-# マークダウン記法で表示させたい
+-# :javascript
+-#   var easyMDE = new EasyMDE({element: $('.postText')[0]});

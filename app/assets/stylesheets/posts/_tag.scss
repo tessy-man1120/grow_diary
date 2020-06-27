@@ -1,0 +1,16 @@
+.postTag{
+  width: 90%;
+  height: 50px;
+  margin: auto;
+  .tagItem {
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    width: 80px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 4px 2px;
+  }
+}

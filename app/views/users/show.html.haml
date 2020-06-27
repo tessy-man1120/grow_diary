@@ -20,7 +20,6 @@
       .link-box
         = icon("fas", "book-reader", class: "icon")
         %buttun.link-box__btn
-          -# = link_to "GoTo Posts", users_path(post.user.id), class: "btn-text"
           = link_to "GoTo Posts", users_path(params[:id]), class: "btn-text"
       - if user_signed_in? && current_user.id == @user.id
         .link-box
