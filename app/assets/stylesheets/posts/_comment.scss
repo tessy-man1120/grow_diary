@@ -4,13 +4,13 @@
   overflow: scroll;
   &__title {
     text-align: center;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid #A0A0A0;
+    border-bottom: 1px solid #A0A0A0;
     margin-bottom: 20px;
   }
   &__text {
     padding-left: 10px;
-    background-color: white;
+    background-color: #fff;
     margin: 5px 30px;
   }
   
@@ -21,7 +21,7 @@
 }
 #comment_text {
   width: 80%;
-  border-top: 1px solid gray;
+  border-top: 1px solid #A0A0A0;
   margin: 30px 0;
 }
 .form__submit {

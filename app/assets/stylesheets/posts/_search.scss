@@ -2,6 +2,8 @@
   height: 100px;
   text-align: center;
   line-height: 100px;
+  width: 80%;
+  margin: auto;
   .search-input {
     width: 60%;
     height: 50px;
@@ -15,19 +17,25 @@
     transition: all 0.1s;
     &:hover{
       background-color: #0B74AF;
+      opacity: 0.8;
     }
   }
 }
 // タグ検索ボタン
-.tag-index__link {
-  height: 40px;
-  width: 150px;
-  margin-left: 130px;
-  list-style: none;
-  border-radius: 4px;
-  transition: all 0.1s;
-    &:hover{
-      background-color:#0B74AF;
+.tag-index {
+  width: 60%;
+  margin: auto;
+  &__link {
+    height: 40px;
+    width: 160px;
+    margin-left: 12px;
+    list-style: none;
+    border-radius: 4px;
+    transition: all 0.1s;
+      &:hover{
+        background-color:#0B74AF;
+        opacity: 0.8;
+      }
     }
-  }
-  
+}
+    

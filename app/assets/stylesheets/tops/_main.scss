@@ -4,7 +4,7 @@ body{
   overflow: scroll;
   .main-intro {
     font-family: 'Silom',sans-serif;
-    color: white;
+    color: #fff;
     height: 800px;
     text-align: center;
     font-size: 60px;
@@ -65,12 +65,12 @@ body{
   position: fixed;
   height: 120px;
   width: 120px;
-  border-radius: 4px;
+  border-radius: 50%;
   background-color: #0B74AF;
   color: #fff;
   bottom:  120px;
   right: 40px;
-  padding: 4px;
+  padding: 8px;
   opacity: 0.9;
   &:hover {
     opacity: 1;
@@ -81,15 +81,17 @@ body{
     font-size: 80px;
   }
 }
+//【未ログイン時】 新規登録用ボタン
 .regBtn {
+  // 四角
+  border-radius: 4px;
   z-index: 1;
   text-align: center;
   display: block;
   position: fixed;
   height: 120px;
   width: 120px;
-  border-radius: 4px;
-  background-color: #1B8787;
+  background-color: #0B74AF;
   color: #fff;
   top:  480px;
   right: 80px;

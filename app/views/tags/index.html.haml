@@ -1,3 +1,7 @@
-- @tags.each do |tag|
-  .content
-    = link_to tag.name, tags_path(params[:id]), class: "content__tagName"
+.tags-wrapper
+  .tagTitle
+    %h2 All List of Tags
+  .tagShows
+    - @tags.each do |tag|
+      .tagShow
+        = link_to tag.name, tag_path(tag.id), class: "tagShow--name"

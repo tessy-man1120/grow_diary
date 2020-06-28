@@ -12,7 +12,8 @@
     = simple_format @post.text
   .postTag
     - @post.tags.each do |tag|
-      %span.tagItem= tag.name
+      %span.tagItem
+        = link_to tag.name, tag_path(tag.id), class: "tagItem--name"
 
 .comments
   .comments__title

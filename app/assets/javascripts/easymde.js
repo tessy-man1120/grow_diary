@@ -6,7 +6,7 @@ var editor = new EasyMDE({
 		delay: 1000,
 		submit_delay: 5000,
 		timeFormat: {
-			locale: 'en-US',
+			locale: 'ja',
 			format: {
 				year: 'numeric',
 				month: 'long',

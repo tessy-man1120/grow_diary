@@ -1,31 +1,28 @@
 .content-title
   = @user.nickname 
-  's Profile
 .prof-cover
   .user-info
-    .user-info__box
-      Profile Picture
-    %br/
-    .image-cover
-      - if @user.image?
-        = image_tag @user.image_url
-      - else
-        %image.icon{alt: "ユーザーアイコン", src: "/assets/default.png"}
-      -# = image_tag @user.image_url if @user.image?
-    .user-info__box
+    .user-info__left
+      .image-cover
+        - if @user.image?
+          = image_tag @user.image_url
+        - else
+          %image.icon{alt: "ユーザーアイコン", src: "/assets/default.png",width:"300px",height:"300px"}
+        -# = image_tag @user.image_url if @user.image?
+    .user-info__right
       Profile
-    .profile-box
-      = @user.profile
-    .link-cover
-      .link-box
-        = icon("fas", "book-reader", class: "icon")
-        %buttun.link-box__btn
-          = link_to "GoTo Posts", users_path(params[:id]), class: "btn-text"
+      .user-info__right--box
+        = @user.profile
+      .link-cover
+        .link-box
+          = icon("fas", "book-reader", class: "icon")
+          %buttun.link-box__btn
+            = link_to "Posts", users_path(params[:id]), class: "btn-text"
       - if user_signed_in? && current_user.id == @user.id
         .link-box
           = icon("fas", "user-edit", class: "icon")
           %buttun.link-box__btn
-            = link_to "Edit Profile", edit_user_registration_path, class: "btn-text"
+            = link_to "Edit", edit_user_registration_path, class: "btn-text"
 
 
 

@@ -8,10 +8,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :users
+  resources :users, only: [:show, :index]
   resources :tags, only: [:index, :show]
-
 end
 
-# resources :users, only: [:show, :index]
-  # resources :tags, only: [:index, :show]

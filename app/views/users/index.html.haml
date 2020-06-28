@@ -3,6 +3,8 @@
     .postTitle
       = @nickname
       's ALL POSTS
+    .pagination-box
+      = paginate(@posts)
     - @posts.each do |post|
       .content
         .content__right

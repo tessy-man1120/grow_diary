@@ -1,11 +1,11 @@
 .contents {
   margin: 30px auto 0;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid #A0A0A0;
+  border-bottom: 1px solid #A0A0A0;
   width: 80%;
   .content {
     padding: 10px;
-    border-bottom: 0.5px solid #adadad ;
+    border-bottom: 0.5px solid #A0A0A0;
     display: flex;
     &__left {
       padding-right: 20px;
@@ -26,7 +26,7 @@
         font-weight: bold;
         &--title{
           text-decoration: none;
-          color: #000000;
+          color: black;
           transition: all 0.1s;
           &:hover{
             color:#0B74AF;
@@ -36,11 +36,13 @@
       }
       &__bottom {
         font-size: 16px;
-        color: #999;
+        color: #A0A0A0;
+        display: flex;
         &--userName {
           &--btn{
             text-decoration: none;
             color: black;
+            padding-right: 16px;
             transition: all 0.1s;
           &:hover {
             color:#0B74AF;
