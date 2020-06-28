@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(10)
-    # @user = User.find(params[:id])
   end
 
   def new
@@ -11,7 +10,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     else
-      # redirect_to new_post_path
+
     end
   end
 

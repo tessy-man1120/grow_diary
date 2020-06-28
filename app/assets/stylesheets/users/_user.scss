@@ -1,37 +1,43 @@
 .content-title{
   height: 100px;
-  width: 100%;
-  border-bottom: 1px solid gray;
+  width: 80%;
+  margin: auto;
+  border-bottom: 2px solid #A0A0A0;
   line-height: 100px;
   text-align: center;
   font-size: 28px;
   font-weight: bold;
 }
 .user-info {
-  height: 500px;
-  text-align: center;
-  &__box {
-    height: 80px;
-    width: 80%;
-    line-height: 80px;
-    margin: 10px auto;
+  max-width: 60%;
+  margin: 20px auto 0 auto;
+  height: 280px;
+  display: flex;
+  border-bottom: 1px solid #A0A0A0;
+  &__left {
+    max-width: 30%;
+    max-height: 30%;
+    margin-left: 20px;
+    
+    .image-cover{
+      margin-right: 20px;
+    }
+  }
+  &__right {
+    width: 400px;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
-    border-bottom: 1px solid gray;
+    margin-left: auto;
+    &--box {
+      padding: 10px;
+      font-weight: lighter;
+    }
   }
 }
 
-.profile-box {
-  padding: 20px 4px;
-  height: 200px;
-  width: 80%;
-  margin: 0 auto 20px auto;
-  font-size: 18px;
-  border-bottom: 1px solid gray;
-}
-
 .fas fa-book-reader icon {
-  color: white;
+  color: #fff;
 }
 
 .link-cover {
@@ -43,15 +49,17 @@
   list-style: none;
   text-decoration: none;
   color: #0B74AF;
-  font-size: 25px;
-  margin-bottom: 50px;
+  font-size: 20px;
 }
 .link-btn {
   height: 50px;
   width: 250px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .btn-text {
   text-decoration: none;
   color:black;
 }
+// .default {
+//   background-image: image-url("default.png");
+// }

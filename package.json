@@ -1,7 +1,11 @@
 {
   "name": "grow_diary",
   "private": true,
-  "dependencies": {
-    "easymde": "^2.10.1"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/marked": "^1.1.0",
+    "dompurify": "^2.0.12",
+    "easymde": "^2.10.1",
+    "marked": "^1.1.0"
   }
 }

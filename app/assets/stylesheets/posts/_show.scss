@@ -6,17 +6,17 @@
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #A0A0A0;
   }
   .postDate {
     padding: 20px 0;
     font-size: 15px;
-    color: #999;
+    color: #A0A0A0;
     text-align: center;
   }
   .postAuthor {
     font-size: 15px;
-    color: #999;
+    color: #A0A0A0;
     text-align: center;
   }
   .postManage {
@@ -27,7 +27,7 @@
       display: block;
       border-radius: 4px;
       color: #fff;
-      padding: 0 10px;
+      padding: 4px 12px;
       text-decoration: none;
       margin-right: 10px;
       background-color:#0B74AF;
@@ -40,10 +40,10 @@
       display: block;
       border-radius: 4px;
       color: #fff;
-      padding: 0 10px;
+      padding: 4px 12px;
       text-decoration: none;
       margin-left: 10px;
-      background-color:#0B74AF;
+      background-color: #DC143C;
       color: #fff;
       &:hover{
         opacity: 0.8;
@@ -101,19 +101,15 @@ margin-left: 5px;
 //   padding: 15px 30px;
 // }
 
-// フローラ入力ボックス
-.fr-box {
-margin-top: 50px;
-}
 // タグ遷移ボックス
 .tag-link{
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
 .pagination-box {
-text-align: center;
-margin: 10px 0;
-.pagination {
-  text-decoration: none;
-}
+  text-align: center;
+  margin: 10px 0;
+  .pagination {
+    text-decoration: none;
+  }
 }

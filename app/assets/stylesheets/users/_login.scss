@@ -1,16 +1,16 @@
 .login-contents {
   margin: auto;
   text-align: center;
+  width: 80%;
   &__title{
-    height: 100px;
-    line-height: 100px;
-    border-bottom: 1px solid gray;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 2px solid #A0A0A0;
     font-size: 28px;
     font-weight: bold;
   }
   .login-content {
-    border-bottom: 1px solid gray;
-    width: 80%;
+    border-bottom: 1px solid #A0A0A0;
     margin: auto;
     font-size: 16px;
     line-height: 50px;
