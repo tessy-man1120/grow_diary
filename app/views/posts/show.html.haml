@@ -16,11 +16,11 @@
         = link_to tag.name, tag_path(tag.id), class: "tagItem--name"
   - if current_user.likes.find_by(post_id: @post.id)
     = link_to post_like_path(@post), class: "likeIcon", method: :delete do
-      %i.fa.fa-heart
+      %i.fas.fa-thumbs-up
       = @like_count
   - else
     = link_to post_likes_path(@post), class: "likeNo", method: :post do
-      %i.far.fa-heart
+      %i.far.fa-thumbs-up
       = @like_count
 .comments
   .comments__title

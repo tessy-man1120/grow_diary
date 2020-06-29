@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'top#index'
   resources :posts do 
-    resources :comments, only: :create
+    resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
     collection do
       get 'search'

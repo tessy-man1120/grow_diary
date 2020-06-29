@@ -1,0 +1,57 @@
+.content-title{
+  height: 100px;
+  width: 80%;
+  margin: auto;
+  border-bottom: 2px solid #A0A0A0;
+  line-height: 100px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+.userPage__contents {
+  margin: 0 auto 100px auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  border-bottom: 2px solid #A0A0A0;
+  &--left {
+    width: 40%;
+    &__user-info {
+      &-profile {
+        padding: 5px;
+      }
+    }
+    .editProfile-text {
+      background-color: #03A9F4;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: #fff;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &--right {
+    width: 60%;
+    padding: 12px 0 0 20px;
+    border-left: 1px solid #757575;
+    &--posts {
+      &__box {
+        padding-bottom: 5px;
+        border-bottom: 1px solid #757575;
+      }
+    }
+      .postTitle {
+        text-decoration: none;
+        color: #212121;
+        &:hover {
+          color:#03A9F4;
+        }
+      }
+      .postTime {
+        font-size: 12px;
+      }
+  }
+}
