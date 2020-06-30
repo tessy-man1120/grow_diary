@@ -4,13 +4,13 @@
   overflow: scroll;
   &__title {
     text-align: center;
-    border-top: 1px solid #A0A0A0;
-    border-bottom: 1px solid #A0A0A0;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
     margin-bottom: 20px;
   }
   &__text {
     padding-left: 10px;
-    background-color: #fff;
+    background-color: $white;
     margin: 5px 30px;
   }
   
@@ -21,7 +21,7 @@
 }
 #comment_text {
   width: 80%;
-  border-top: 1px solid #A0A0A0;
+  border-top: 1px solid $gray;
   margin: 30px 0;
 }
 .form__submit {
@@ -29,8 +29,8 @@
   height: 28px;
   border-radius: 4px; 
   margin-bottom: 50px;
-  background-color: #0B74AF;
-  color: #fff;
+  background-color: $blue;
+  color: $white;
   &:hover {
     opacity: 0.8;
   }

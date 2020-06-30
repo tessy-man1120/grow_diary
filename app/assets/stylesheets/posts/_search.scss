@@ -16,7 +16,7 @@
     border-radius: 4px;
     transition: all 0.1s;
     &:hover{
-      background-color: #0B74AF;
+      background-color: $blue;
       opacity: 0.8;
     }
   }
@@ -33,7 +33,7 @@
     border-radius: 4px;
     transition: all 0.1s;
       &:hover{
-        background-color:#0B74AF;
+        background-color:$blue;
         opacity: 0.8;
       }
     }
@@ -41,5 +41,5 @@
 // タグ検索ボックス
 .tag-link{
   text-decoration: none;
-  color: black;
+  color: $black;
 }

@@ -2,7 +2,7 @@
   height: 100px;
   width: 80%;
   margin: auto;
-  border-bottom: 2px solid #A0A0A0;
+  border-bottom: 2px solid $gray;
   line-height: 100px;
   text-align: center;
   font-size: 28px;
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   height: 600px;
-  border-bottom: 2px solid #A0A0A0;
+  border-bottom: 2px solid $gray;
   &--left {
     width: 40%;
     &__user-info {
@@ -23,11 +23,11 @@
       }
     }
     .editProfile-text {
-      background-color: #03A9F4;
+      background-color: $blue;
       text-decoration: none;
       padding: 4px 8px;
       border-radius: 4px;
-      color: #fff;
+      color: $white;
       &:hover {
         opacity: 0.8;
       }
@@ -36,18 +36,18 @@
   &--right {
     width: 60%;
     padding: 12px 0 0 20px;
-    border-left: 1px solid #757575;
+    border-left: 1px solid $gray;
     &--posts {
       &__box {
         padding-bottom: 5px;
-        border-bottom: 1px solid #757575;
+        border-bottom: 1px solid $gray;
       }
     }
       .postTitle {
         text-decoration: none;
-        color: #212121;
+        color: $black;
         &:hover {
-          color:#03A9F4;
+          color:$blue;
         }
       }
       .postTime {

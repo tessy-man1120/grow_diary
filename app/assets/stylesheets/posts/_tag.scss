@@ -5,7 +5,7 @@
   .tagTitle {
     text-align: center;
     margin: auto;
-    border-bottom: 1px solid #A0A0A0;
+    border-bottom: 1px solid $gray;
     height: 80px;
     line-height: 80px;
   }
@@ -20,8 +20,8 @@
         }
       &--name{
         text-decoration: none;
-        color: #fff;
-        background-color: #A0A0A0;
+        color: $white;
+        background-color: $gray;
         border-radius: 4px;
         padding: 2px 4px;
       }
@@ -34,16 +34,16 @@
   height: 50px;
   margin: auto;
   .tagItem {
-    color: #fff;
+    color: $white;
     text-align: center;
     line-height: 40px;
-    background-color: #A0A0A0;
+    background-color: $gray;
     border-radius: 4px;
     margin: 0 4px;
     padding: 4px 8px;
     &--name{
       text-decoration: none;
-      color: #fff;
+      color: $white;
     }
     &:hover{
       opacity: 0.8;
@@ -59,7 +59,7 @@
   margin: auto;
   .content {
     padding: 10px;
-    border-bottom: 0.5px solid #A0A0A0;
+    border-bottom: 0.5px solid $gray;
     display: flex;
     &__left {
       padding-right: 20px;
@@ -81,26 +81,26 @@
         display: flex;
         &--title{
           text-decoration: none;
-          color: black;
+          color: $black;
           transition: all 0.1s;
           &:hover{
-            color:#0B74AF;
+            color:$blue;
             letter-spacing: 1px;
           }
         }
       }
       &__bottom {
         font-size: 16px;
-        color: #A0A0A0;
+        color: $gray;
         display: flex;
         &--userName {
           &--btn{
             text-decoration: none;
-            color: black;
+            color: $black;
             padding-right: 16px;
             transition: all 0.1s;
           &:hover {
-            color:#0B74AF;
+            color:$blue ;
             letter-spacing: 0.8px;
           }
           }

@@ -1,11 +1,11 @@
 .contents {
   margin: 30px auto 0;
-  border-top: 1px solid #A0A0A0;
-  border-bottom: 1px solid #A0A0A0;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
   width: 80%;
   .content {
     padding: 10px;
-    border-bottom: 0.5px solid #A0A0A0;
+    border-bottom: 0.5px solid $gray;
     display: flex;
     &__left {
       padding-right: 20px;
@@ -26,26 +26,26 @@
         font-weight: bold;
         .posttitle {
           text-decoration: none;
-          color: black;
+          color: $black;
           transition: all 0.1s;
           &:hover{
-            color:#0B74AF;
+            color:$blue;
             letter-spacing: 1px;
           }
         }
       }
       &__bottom {
         font-size: 16px;
-        color: #A0A0A0;
+        color: $gray;
         display: flex;
         &--userName {
           &--btn{
             text-decoration: none;
-            color: black;
+            color: $black;
             padding-right: 16px;
             transition: all 0.1s;
           &:hover {
-            color:#0B74AF;
+            color:$blue;
             letter-spacing: 0.8px;
           }
           }
@@ -54,7 +54,7 @@
           padding-right: 20px;
         }
         .fa-thumbs-up {
-          color: #03A9F4;
+          color: $blue;
         }
       }
     }
@@ -65,7 +65,7 @@
   height: 100px;
   line-height: 100px;
   text-align: center;
-  background-color: #0B74AF;
+  background-color: $blue;
   opacity: 0.8;
-  color: #fff;
+  color: $white;
 }
