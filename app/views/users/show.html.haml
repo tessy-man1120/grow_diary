@@ -7,17 +7,19 @@
     - else
       %image.icon{alt: "ユーザーアイコン", src: "/assets/default.png",width:"200px",height:"200px"}
     .userPage__contents--left__user-info-title
-      %h4 Profile
+      = render "relationships/follow_button", user:@user
       - if user_signed_in? && current_user.id == @user.id
         .editProf-box
           -# = icon("fas", "user-edit", class: "icon")
           %buttun.editProf-box-btn
             = link_to "Edit Profile", edit_user_registration_path, class: "editProfile-text"
+      %h4 Profile
       .userPage__contents--left__user-info-profile
-        = @user.profile
+        .profile-text
+          = @user.profile
   .userPage__contents--right
-    -# .pagination-box
-    -#   = paginate(@posts)
+    .pagination-box
+      = paginate(@posts)
     .userPage__contents--right__posts
       - @posts.each do |post|
         .userPage__contents--right__posts__box

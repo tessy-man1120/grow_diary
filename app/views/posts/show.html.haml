@@ -14,14 +14,7 @@
     - @post.tags.each do |tag|
       %span.tagItem
         = link_to tag.name, tag_path(tag.id), class: "tagItem--name"
-  - if current_user.likes.find_by(post_id: @post.id)
-    = link_to post_like_path(@post), class: "likeIcon", method: :delete do
-      %i.fas.fa-thumbs-up
-      = @like_count
-  - else
-    = link_to post_likes_path(@post), class: "likeNo", method: :post do
-      %i.far.fa-thumbs-up
-      = @like_count
+  = render "likes/like_button"
 .comments
   .comments__title
     %h4 Comments for this post

@@ -1,0 +1,19 @@
+.unFollowBtn {
+  background-color: $blue;
+  border-radius: 4px;
+  color: $white;
+  margin-top: 20px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.followBtn {
+  background-color: $gray;
+  border-radius: 4px;
+  color: $white;
+  margin-top: 20px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
