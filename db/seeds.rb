@@ -15,4 +15,8 @@ Tag.create([
   { name: "Ruby"},
   { name: "Rails"},
   { name: "JavaScript"}
+  { name: "PHP"},
+  { name: "C言語"},
+  { name: "Git"},
+  { name: "その他"}
 ])

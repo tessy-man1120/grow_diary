@@ -1,7 +1,6 @@
 .contents {
-  margin: 30px auto 0;
+  margin: 30px auto 50px;
   border-top: 1px solid $gray;
-  border-bottom: 1px solid $gray;
   width: 80%;
   .content {
     padding: 10px;
@@ -14,10 +13,10 @@
         width: 55px;
         border: solid 1px;
       }
-      .sml-img {
-        height: 100%;
-        width: 100%;
-      }
+      // .sml-img {
+      //   height: 100%;
+      //   width: 100%;
+      // }
     }
     &__right {
       width: calc(100%-100px);
@@ -55,7 +54,7 @@
         }
         .fa-thumbs-up {
           color: $blue;
-        }
+        } 
       }
     }
   }
@@ -68,4 +67,14 @@
   background-color: $blue;
   opacity: 0.8;
   color: $white;
+}
+
+// ページネーション
+.pagination-box {
+  text-align: center;
+  margin: 20px 0;
+  .pagination {
+    text-decoration: none;
+    color: $black;
+  }
 }
