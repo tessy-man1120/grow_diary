@@ -7,16 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Tag.create([
-  { name: "日記"},
-  { name: "備忘録"},
-  { name: "駆け出しエンジニア"},
-  { name: "HTML"},
-  { name: "CSS"},
-  { name: "Ruby"},
-  { name: "Rails"},
-  { name: "JavaScript"}
-  { name: "PHP"},
-  { name: "C言語"},
-  { name: "Git"},
-  { name: "その他"}
+  { name: "Diary"},
+  { name: "Hobby"},
+  { name: "Holiday"},
+  { name: "Work"},
+  { name: "MySelf"},
+  { name: "Relationship"}
 ])

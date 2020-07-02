@@ -15,14 +15,23 @@
   justify-content: center;
   height: 600px;
   border-bottom: 2px solid $gray;
-  &--left {
+  &__left {
     width: 40%;
-    &__user-info {
-      &-profile {
-        padding: 20px 20px 30px 0;
+    &__userInfo {
+      display: left;
+      .followerCount {
+        margin: 20px 0;
       }
-    }
-    .editProfile-text {
+      &--prof {
+        padding: 20px 20px 30px 0;
+        &--text{
+          border-top: 1px solid $gray;
+          border-bottom: 1px solid $gray;
+          height: 190px;
+          overflow: scroll;
+        }
+      }
+    .editProfText {
       background-color: $blue;
       text-decoration: none;
       padding: 4px 8px;
@@ -34,14 +43,13 @@
       }
     }
   }
-  &--right {
+}
+  &__right {
     width: 60%;
     padding: 12px 0 0 20px;
     border-left: 1px solid $gray;
     .pagination-box {
       text-align: left;
-    }
-    &--posts {
     }
       .postTitle {
         text-decoration: none;
