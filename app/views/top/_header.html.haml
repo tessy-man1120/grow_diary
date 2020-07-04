@@ -4,9 +4,10 @@
   .header__right
     - if user_signed_in?
       = link_to current_user.nickname, user_path(current_user), class: "header__right--btn"
+      = link_to "TAGS", tags_path, class: "header__right--btn"
       = link_to "ALLPOSTS", posts_path, class: "header__right--btn"
       = link_to "NEWPOST", new_post_path, class: "header__right--btn"
-      = link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "header__right--btn"
+      -# = link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "header__right--btn"
     - else
       = link_to "ALLPOSTS", posts_path, class: "header__right--btn"
       = link_to "LOGIN", new_user_session_path, class: "header__right--btn"

@@ -1,22 +1,19 @@
 = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
   = form.text_field :keyword, placeholder: "Search for posts", class: "search-input"
   = form.submit "Search", class: "search-btn"
-.tag-index
-  %button.tag-index__link
-    = link_to "Search Tags", tags_path, class: "tag-link"
 .contents
   - @posts.each do |post|
     .content
-      .content__left
-        -# .content__left--image
       .content__right
         .content__right__top
           = link_to post.title, post_path(post.id), class: "posttitle"
         .content__right__bottom
-          = link_to post.user.nickname, user_path(post.user), class: "content__right__bottom--userName--btn"
+          = link_to "@#{post.user.nickname}", user_path(post.user), class: "content__right__bottom--userName--btn"
           .content__right__bottom--date
             = post.created_at.strftime('%Y/%m/%d %H:%M') 
           %i.far.fa-thumbs-up
           = @like_count
+          %i.far.fa-comment
+          = @comment_count
   .pagination-box
     = paginate(@posts)

@@ -13,10 +13,6 @@
         width: 55px;
         border: solid 1px;
       }
-      // .sml-img {
-      //   height: 100%;
-      //   width: 100%;
-      // }
     }
     &__right {
       width: calc(100%-100px);
@@ -54,7 +50,13 @@
         }
         .fa-thumbs-up {
           color: $blue;
+          font-size: 20px;
         } 
+        .fa-comment {
+          color: $black;
+          padding-left: 30px;
+          font-size: 20px;
+        }
       }
     }
   }
@@ -67,6 +69,18 @@
   background-color: $blue;
   opacity: 0.8;
   color: $white;
+}
+.content__right__top{
+  margin-bottom: 5px;
+  &--title {
+    text-decoration: none;
+    color: $black;
+    font-size: 20px;
+    font-weight: bold;
+    &:hover {
+      color:$blue;
+    }
+  }
 }
 
 // ページネーション

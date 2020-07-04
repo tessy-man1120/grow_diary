@@ -1,0 +1,96 @@
+.postShow-contents {
+  width: 80%;
+  margin: auto;
+  .postImage {
+    height: 300px;
+    width: 100%;
+    margin-top: 50px;
+    background-color: $white;
+  }
+  .postTitle {
+    font-family: 'Silom',sans-serif;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 2px solid $gray;
+  }
+  .postDate {
+    padding: 20px 0;
+    font-size: 15px;
+    color: $gray;
+    text-align: center;
+  }
+  .postInfo {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    &__username {
+      margin-right: 40px;
+      .postInfo__nickname {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: $black;
+        &:hover{
+          color:$blue;
+        }
+      }
+    }
+    &__commentIcon{
+      text-decoration: none;
+      color: $black;
+      font-size: 24px;
+      margin-left: 20px;
+    }
+  }
+  .postAuthor {
+    font-size: 15px;
+    color: $gray;
+    text-align: center;
+  }
+  .postManage {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    &__edit{
+      display: block;
+      border-radius: 4px;
+      color: $white;
+      padding: 4px 12px;
+      text-decoration: none;
+      margin-right: 10px;
+      background-color:$blue;
+      color: $white;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+    &__delete{
+      display: block;
+      border-radius: 4px;
+      color: $white;
+      padding: 4px 12px;
+      text-decoration: none;
+      margin-left: 10px;
+      background-color: #DC143C;
+      color: $white;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+  .postText{
+    margin: 10px;
+    padding: 40px 80px;
+    background-color:$white;
+    overflow: scroll;
+  }
+  .postLikeIcon{
+    &--foot {
+      padding-left: 20px;
+    }
+  }
+}
+
+

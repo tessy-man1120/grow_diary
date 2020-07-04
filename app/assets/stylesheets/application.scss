@@ -9,10 +9,12 @@
 
 @import "posts/index";
 @import "posts/new";
+@import "posts/show";
 @import "posts/search";
 @import "posts/comment";
-@import "posts/tag";
 @import "posts/like";
+
+@import "tags/tag";
 
 @import "users/show";
 @import "users/signup";

@@ -1,5 +1,5 @@
 .content-title
-  = @user.nickname 
+  = "@#{@user.nickname}" 
 .userPage__contents
   .userPage__contents__left
     - if @user.image?
@@ -11,13 +11,13 @@
       - if user_signed_in? && current_user.id == @user.id
         %buttun.editProf-box-btn
           = link_to "Edit Your Profile?", edit_user_registration_path, class: "editProfText"
+          = link_to "SignOut", destroy_user_session_path, method: :delete, class: "logoutBtn"
       %h4 Profile
       .userPage__contents__left__userInfo--prof
         .userPage__contents__left__userInfo--prof--text
           = simple_format @user.profile
   .userPage__contents__right
-    .pagination-box
-      = paginate(@posts)
+    %h2 Posts
     .userPage__contents__right__posts
       - @posts.each do |post|
         .userPage__contents__right__posts__box
@@ -25,7 +25,5 @@
             = link_to post.title, post_path(post.id), class:"postTitle"
           .userPage__content__right__posts__box--time
             = post.created_at.strftime('%Y/%m/%d %H:%M')
-
-
-
-
+    .pagination-box
+      = paginate(@posts)

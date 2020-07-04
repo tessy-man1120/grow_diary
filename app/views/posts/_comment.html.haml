@@ -1,0 +1,24 @@
+.comments
+  .comments__title
+    %h4 Comments for this post
+  - if @comments
+    - @comments.each do |comment|
+      .comments__text
+        %p
+          = link_to comment.user.nickname, "/users/#{comment.user_id}"
+          ：
+          = comment.text
+        .comments__text__time
+          = comment.created_at.strftime('%Y/%m/%d %H:%M')
+
+.container
+  .form-title
+    %h4 Input Comment
+  .form-box
+    - if current_user
+      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
+        = form.text_area :text, placeholder: "Type a Comment", rows: "10", class: "textbox"
+        = form.submit "SEND", class: "form__submit"
+    - else
+      %strong
+        %p ※※※ 新規登録/ログインでコメントすることができます。 ※※※

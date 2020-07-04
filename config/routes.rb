@@ -9,8 +9,11 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :users, only: [:show]
-  resources :tags, only: [:index, :show]
+
+  resources :users, only: [:show] 
+  resources :tags, only: [:index, :show] do
+    get 'posts', to: 'posts#show'
+  end
   resources :relationships, only: [:create, :destroy]
 end
 

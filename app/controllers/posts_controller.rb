@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(10)
-    # @post = Post.find(params[:id])
     # @like_count = Like.where(post_id: @post.id).count
   end
 
@@ -12,7 +11,6 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     else
-
     end
   end
 
@@ -25,6 +23,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
+    @comment_count = Comment.where(post_id: @post.id).count
     @like_count = Like.where(post_id: @post.id).count
   end
 

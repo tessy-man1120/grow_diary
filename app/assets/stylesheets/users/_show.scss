@@ -13,9 +13,9 @@
   width: 80%;
   display: flex;
   justify-content: center;
-  height: 600px;
-  border-bottom: 2px solid $gray;
+  height: 800px;
   &__left {
+    margin-top: 30px;
     width: 40%;
     &__userInfo {
       display: left;
@@ -23,11 +23,11 @@
         margin: 20px 0;
       }
       &--prof {
-        padding: 20px 20px 30px 0;
         &--text{
+          height: 300px;
+          padding: 5px;
           border-top: 1px solid $gray;
           border-bottom: 1px solid $gray;
-          height: 190px;
           overflow: scroll;
         }
       }
@@ -42,12 +42,26 @@
         opacity: 0.8;
       }
     }
+    .logoutBtn {
+      background-color: #DC143C;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: $white;
+      margin: 20px 0 0 30px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
   &__right {
     width: 60%;
+    margin-left: 50px;
     padding: 12px 0 0 20px;
-    border-left: 1px solid $gray;
+    &__posts__box{
+      margin-bottom: 15px;
+    }
     .pagination-box {
       text-align: left;
     }

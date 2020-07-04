@@ -1,0 +1,194 @@
+.tags-wrapper {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  .tagTitle {
+    text-align: center;
+    margin: auto;
+    border-bottom: 1px solid $gray;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .tagShows {
+    margin: 50px auto;
+    &--name{
+      display: inline-block;
+      text-decoration: none;
+      color: $black;
+      background-color: $white;
+      margin-top: 5px;
+      padding: 5px 40px;
+      opacity: 0.8;
+      border-radius: 25px;
+    }
+    .tagContents{
+      color: $white;
+      font-weight: bold;
+      font-size: 24px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .content-one{
+        background-image: url("https://picjumbo.com/wp-content/uploads/luxury-silver-pen-with-a-business-diary_free_stock_photos_picjumbo_IMG_3242-2210x1473.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        margin: 20px;
+        transition: 1.0s;
+        &:hover{
+          opacity: 0.6;
+          background-color: $gray;
+        }
+      }
+      .content-two{
+        background-image: url("https://picjumbo.com/wp-content/uploads/4th-of-july-1080x720.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        margin: 20px;
+        transition: 1.0s;
+        &:hover{
+          opacity: 0.6;
+          background-color: $gray;
+        }
+      }
+      .content-three{
+        background-image: url("https://picjumbo.com/wp-content/uploads/man-reading-notes-from-his-notebook-1080x720.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        margin: 20px;
+        transition: 1.0s;
+        &:hover{
+          opacity: 0.6;
+          background-color: $gray;
+        }
+      }
+      .content-four{
+        background-image: url("https://picjumbo.com/wp-content/uploads/DSC04444-2210x1473.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        margin: 20px;
+        transition: 1.0s;
+        &:hover{
+          opacity: 0.6;
+          background-color: $gray;
+        }
+      }
+      .content-five{
+        background-image: url("https://picjumbo.com/wp-content/uploads/couple-having-a-summer-picnic-1080x1620.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        margin: 20px;
+        transition: 1.0s;
+        &:hover{
+          opacity: 0.6;
+          background-color: $gray;
+        }
+      }
+      .content-six{
+        background-image: url("https://picjumbo.com/wp-content/uploads/fist-bump-with-cordwainer-statue-london-1080x721.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        margin: 20px;
+        transition: 1.0s;
+        &:hover{
+          opacity: 0.6;
+          background-color: $gray;
+        }
+      }
+    }
+  }
+}
+
+.postTag{
+  width: 90%;
+  height: 50px;
+  margin: auto;
+  .tagItem {
+    color: $white;
+    text-align: center;
+    line-height: 40px;
+    background-color: $gray;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 4px 8px;
+    &--name{
+      text-decoration: none;
+      color: $white;
+    }
+    &:hover{
+      opacity: 0.8;
+      }
+  }
+}
+
+.tagTitle {
+  font-size: 28px;
+  font-weight: bold;
+}
+.showTagPost {
+  margin: auto;
+  .content {
+    padding: 10px;
+    border-bottom: 0.5px solid $gray;
+    display: flex;
+    &__left {
+      padding-right: 20px;
+      &--image{
+        height: 55px;
+        width: 55px;
+        border: solid 1px;
+      }
+      .sml-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__right {
+      width: calc(100%-100px);
+      &__top {
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        &--title{
+          text-decoration: none;
+          color: $black;
+          transition: all 0.1s;
+          &:hover{
+            color:$blue;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      &__bottom {
+        font-size: 16px;
+        color: $gray;
+        display: flex;
+        &--userName {
+          &--btn{
+            text-decoration: none;
+            color: $black;
+            padding-right: 16px;
+            transition: all 0.1s;
+          &:hover {
+            color:$blue ;
+            letter-spacing: 0.8px;
+          }
+          }
+        }
+      }
+    }
+  }
+}
+

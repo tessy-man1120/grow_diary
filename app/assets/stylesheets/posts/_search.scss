@@ -21,25 +21,3 @@
     }
   }
 }
-// タグ検索ボタン
-.tag-index {
-  width: 60%;
-  margin: auto;
-  &__link {
-    height: 40px;
-    width: 160px;
-    margin-left: 12px;
-    list-style: none;
-    border-radius: 4px;
-    transition: all 0.1s;
-      &:hover{
-        background-color:$blue;
-        opacity: 0.8;
-      }
-    }
-}
-// タグ検索ボックス
-.tag-link{
-  text-decoration: none;
-  color: $black;
-}

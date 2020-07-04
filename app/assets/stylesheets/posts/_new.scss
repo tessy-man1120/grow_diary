@@ -1,99 +1,39 @@
-.postShow-contents {
-  width: 80%;
-  margin: auto;
-  .postTitle {
-    padding: 50px 0;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    border-bottom: 2px solid $gray;
+.form-group {
+  display: flex;
+  margin: 20px 0;
   }
-  .postDate {
-    padding: 20px 0;
-    font-size: 15px;
-    color: $gray;
-    text-align: center;
+  
+  .form-check {
+  margin-left: 5px;
   }
-  .postAuthor {
-    font-size: 15px;
-    color: $gray;
-    text-align: center;
-  }
-  .postManage {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    &__edit{
+  
+  .form{
+    width: 80%;
+    height: 100%;
+    margin: 40px auto 0 auto;
+    padding-top: 40px;
+    margin-bottom: 50px;
+    &__title{
       display: block;
+      width: 100%;
+      height: 56px;
+    }
+    &__text{
+      display: block;
+      width: 100%;
+      height: 50%;
+      margin-top: 15px;
+    }
+    &__postBtn{
+      display: block;
+      height: 48px;
+      width: 40%;
+      margin: 15px auto 0;
       border-radius: 4px;
-      color: $white;
-      padding: 4px 12px;
-      text-decoration: none;
-      margin-right: 10px;
       background-color:$blue;
       color: $white;
       &:hover{
         opacity: 0.8;
       }
     }
-    &__delete{
-      display: block;
-      border-radius: 4px;
-      color: $white;
-      padding: 4px 12px;
-      text-decoration: none;
-      margin-left: 10px;
-      background-color: #DC143C;
-      color: $white;
-      &:hover{
-        opacity: 0.8;
-      }
-    }
   }
-  .postText{
-    margin: 10px;
-    padding: 0 10px;
-    background-color:$white;
-    overflow: scroll;
-  }
-}
-.form-group {
-display: flex;
-margin: 20px 0;
-}
-
-.form-check {
-margin-left: 5px;
-}
-
-.form{
-  width: 80%;
-  height: 100%;
-  margin: 40px auto 0 auto;
-  padding-top: 40px;
-  margin-bottom: 50px;
-  &__title{
-    display: block;
-    width: 100%;
-    height: 56px;
-  }
-  &__text{
-    display: block;
-    width: 100%;
-    height: 50%;
-    margin-top: 15px;
-  }
-  &__postBtn{
-    display: block;
-    height: 48px;
-    width: 40%;
-    margin: 15px auto 0;
-    border-radius: 4px;
-    background-color:$blue;
-    color: $white;
-    &:hover{
-      opacity: 0.8;
-    }
-  }
-}
-

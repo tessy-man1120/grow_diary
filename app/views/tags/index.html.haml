@@ -2,6 +2,19 @@
   .tagTitle
     %h2 All List of Tags
   .tagShows
-    - @tags.each do |tag|
-      .tagShow
-        = link_to tag.name, tag_path(tag.id), class: "tagShow--name"
+    -# - @tags.each do |tag|
+    -#   .tagShow
+    -#     = link_to tag.name, tag_path(tag.id), class: "tagShow--name"
+    .tagContents
+      .content-one
+        = link_to @tags[0]["name"], tag_path(tag.id[0]), class: "tagShows--name"
+      .content-two
+        = link_to @tags[1]["name"], tag_path(tag.id[1]), class: "tagShows--name"
+      .content-three
+        = link_to @tags[2]["name"], tag_path(tag.id[2]), class: "tagShows--name"
+      .content-four
+        = link_to @tags[3]["name"], tag_path(tag.id[3]), class: "tagShows--name"
+      .content-five
+        = link_to @tags[4]["name"], tag_path(tag.id[4]), class: "tagShows--name"
+      .content-six
+        = link_to @tags[5]["name"], tag_path(tag.id[5]), class: "tagShows--name"
