@@ -4,7 +4,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :fog
+  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -44,10 +44,12 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-  if Rails.env.development? || Rails.env.test?
-    storage :file
-  else
-    storage :fog
-  end
+
+  #S3導入時にコメントアウト解除
+  # if Rails.env.development? || Rails.env.test?
+  #   storage :file
+  # else
+  #   storage :fog
+  # end
   
 end
