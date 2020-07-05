@@ -12,10 +12,9 @@
           = comment.created_at.strftime('%Y/%m/%d %H:%M')
 
 .container
-  .form-title
-    %h4 Input Comment
   .form-box
     - if current_user
+      .form-title
       = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
         = form.text_area :text, placeholder: "Type a Comment", rows: "10", class: "textbox"
         = form.submit "SEND", class: "form__submit"

@@ -1,6 +1,9 @@
 .postShow-contents
   .postImage
-    -# = image_tag @post.image.url
+    - if @post.image?
+      = image_tag @post.image_url, class:"postImage--inner"
+    - else
+      No Image
   .postTitle
     = @post.title
   .postDate

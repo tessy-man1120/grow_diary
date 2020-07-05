@@ -1,28 +1,14 @@
 class RelationshipsController < ApplicationController
-  # before_action :set_user
+  
+  def follow
+    current_user.follow(params[:id])
+    redirect_to root_path
+  end
+  
+  def unfollow
+    current_user.unfollow(params[:id])
+    redirect_to root_path
 
-  def create
-    @user = User.find(params[:follow_id])
-    following = current_user.follow(@user)
-    if following.save
-      redirect_to @user
-    else
-      redirect_to @user
-    end
   end
 
-  def destroy
-    @user = User.find(params[:follow_id])
-    following = current_user.unfollow(@user)
-    if following.destroy
-      redirect_to @user
-    else
-      redirect_to @user
-    end
-  end
-
-  # private
-  # def
-  #   @user = User.find(params[:relationship][:follow_id])
-  # end
 end

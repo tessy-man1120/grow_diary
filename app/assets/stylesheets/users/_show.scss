@@ -9,7 +9,7 @@
   font-weight: bold;
 }
 .userPage__contents {
-  margin: 0 auto 100px auto;
+  margin: auto;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -17,6 +17,18 @@
   &__left {
     margin-top: 30px;
     width: 40%;
+    &__imageBox {
+      width: 250px;
+      height: 250px;
+      border: 1px solid $gray;
+      background-color: $white;
+      text-align: center;
+      font-weight: bold;
+      .profImage{
+        width: 100%;
+        height: 100%;
+      }
+    }
     &__userInfo {
       display: left;
       .followerCount {
@@ -31,30 +43,30 @@
           overflow: scroll;
         }
       }
-    .editProfText {
-      background-color: $blue;
-      text-decoration: none;
-      padding: 4px 8px;
-      border-radius: 4px;
-      color: $white;
-      margin-top: 20px;
-      &:hover {
-        opacity: 0.8;
+      .editProfText {
+        background-color: $blue;
+        text-decoration: none;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: $white;
+        margin-top: 20px;
+        &:hover {
+          opacity: 0.8;
+        }
       }
-    }
-    .logoutBtn {
-      background-color: #DC143C;
-      text-decoration: none;
-      padding: 4px 8px;
-      border-radius: 4px;
-      color: $white;
-      margin: 20px 0 0 30px;
-      &:hover {
-        opacity: 0.8;
+      .logoutBtn {
+        background-color: #DC143C;
+        text-decoration: none;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: $white;
+        margin: 20px 0 0 30px;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
-}
   &__right {
     width: 60%;
     margin-left: 50px;
@@ -74,6 +86,28 @@
           color:$blue;
         }
       }
-      
+    }
+}
+
+.userPage__bottom {
+  width: 80%;
+  margin: 50px auto 100px auto;
+  display: flex;
+  justify-content: center;
+  &__left{
+    width: 50%;
+    text-align: center;
+  }
+  &__right{
+    width: 50%;
+    text-align: center;
+  }
+  .userNickname {
+    text-decoration: none;
+    color: $black;
+    font-size: 20px;
+    &:hover {
+      color: $blue;
+    }
   }
 }

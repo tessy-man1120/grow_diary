@@ -12,4 +12,5 @@ class Post < ApplicationRecord
     Post.where('text LIKE(?)', "%#{search}%")
   end
 
+  mount_uploader :image, AvatarUploader
 end
