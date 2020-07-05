@@ -9,7 +9,7 @@
       .edit-content__image
         = f.label :image
         %br/
-        = image_tag @user.image_url if @user.image?
+        = image_tag @user.image.url if @user.image?
         %br/
         = f.file_field :image
       .edit-content__email

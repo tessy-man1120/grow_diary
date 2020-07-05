@@ -1,15 +1,11 @@
-- if user_signed_in?   
-  - unless current_user == @user
-    - if current_user.following?(@user)
-      = form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f|
-        = hidden_field_tag :follow_id, @user.id
-        = f.submit 'Following', class: 'unFollowBtn'
-    - else
-      = form_for(current_user.relationships.build) do |f|
-        = hidden_field_tag :follow_id, @user.id
-        = f.submit 'NotFollow', class: 'followBtn'
+- if user_signed_in? 
   .followerCount
-    Follower :
-    = @user_count
+    %p= "Following: #{@user.follower.count}"
+    %p= "Followers: #{@user.followed.count}"
+  - unless user_signed_in? && current_user.id == @user.id
+    - if current_user.following?(@user)
+      = link_to 'Following', unfollow_path(user.id), class: 'unFollowBtn', method: :POST 
+    - else
+      = link_to 'Not Following', follow_path(user.id), class: 'followBtn', method: :POST
 - else
-  %strong ※新規登録/ログインでフォロー機能が使えます
+  %strong ※新規登録/ログインでフォロー機能が使えます※

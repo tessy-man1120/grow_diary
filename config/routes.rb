@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:index, :show] do
     get 'posts', to: 'posts#show'
   end
-  resources :relationships, only: [:create, :destroy]
+  post 'follow/:id' => 'relationships#follow', as: 'follow' 
+  post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow'
 end
 

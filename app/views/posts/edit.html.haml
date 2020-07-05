@@ -3,6 +3,9 @@
 = form_with model: @post, class: :form, local: true do |form|
   = form.text_field :title, placeholder: :"Title", class: :form__title
   = form.text_area :text, placeholder: :"Text", class: :form__text
+  %h2 Top Image
+  = image_tag @post.image.url if @post.image?
+  = form.file_field :image
   .form-tag
   %h2 Check Tags
   = form_for @post do |f|
