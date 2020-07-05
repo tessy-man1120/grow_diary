@@ -40,3 +40,4 @@
 -#       %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
 
 
+= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "logoutBtn"
