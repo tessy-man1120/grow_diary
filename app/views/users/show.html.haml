@@ -8,7 +8,7 @@
       - else
         %image.icon{alt: "ユーザーアイコン", src: "/assets/default.png",width:"200px",height:"200px"}
     .userPage__contents__left__userInfo
-      = render "relationships/follow_button", user:@user
+      -# = render "relationships/follow_button", user:@user
       - if user_signed_in? && current_user.id == @user.id
         %buttun.editProf-box-btn
           = link_to "Edit Your Profile", edit_user_registration_path, class: "editProfText"
@@ -29,13 +29,13 @@
     .pagination-box
       = paginate(@posts)
 -# (仮)それぞれ非同期で投稿一覧部分に表示させたい
--# .userPage__bottom
--#   .userPage__bottom__left
--#     %h2 Following List
--#     - @user.following_user.each do |user|
--#       %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
--#   .userPage__bottom__right
--#     %h2 Follower List
--#     - @user.follower_user.each do |user|
--#       %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
+.userPage__bottom
+  .userPage__bottom__left
+    %h2 Following List
+    - @user.following_user.each do |user|
+      %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
+  .userPage__bottom__right
+    %h2 Follower List
+    - @user.follower_user.each do |user|
+      %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
 
