@@ -29,13 +29,13 @@
     .pagination-box
       = paginate(@posts)
 -# (仮)それぞれ非同期で投稿一覧部分に表示させたい
-.userPage__bottom
-  .userPage__bottom__left
-    %h2 Following List
-    - @user.following_user.each do |user|
-      %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
-  .userPage__bottom__right
-    %h2 Follower List
-    - @user.follower_user.each do |user|
-      %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
+-# .userPage__bottom
+-#   .userPage__bottom__left
+-#     %h2 Following List
+-#     - @user.following_user.each do |user|
+-#       %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
+-#   .userPage__bottom__right
+-#     %h2 Follower List
+-#     - @user.follower_user.each do |user|
+-#       %p= link_to "@#{user.nickname}", user_path(user), class: "userNickname"
 
