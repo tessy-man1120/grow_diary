@@ -9,6 +9,56 @@
   border-top: 20px solid $black;
   }
 }
+.contentIntro {
+  font-family: 'Silom',sans-serif;
+  display: flex;
+  height: 500px;
+  width: 80%;
+  margin: 20px auto 0 auto;
+  p {
+    font-size: 14px;
+  }
+  &__aboutMe {
+    width: 50%;
+    text-align: center;
+    .myimage {
+      width: 200px;
+      height: 200px;
+      border-radius: 50px;
+      opacity: 0.9;
+    }
+    &--link{
+      font-size: 40px;
+      margin: auto;
+      .link-insta{
+        text-decoration: none;
+        color: $black;
+      }
+      .link-twitter{
+        text-decoration: none;
+        color: $black;
+        margin-left: 20px;
+      }
+    }
+  }
+  &__git {
+    width: 50%;
+    text-align: center;
+    &--icon{
+      height: 200px;
+      font-size: 150px;
+    }
+    .github-link {
+      text-decoration: none;
+      color: $gray;
+      transition: all 0.1s;
+      &:hover {
+        color: $black;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
 .company {
   font-family: 'Silom',sans-serif;
   height: 100px;

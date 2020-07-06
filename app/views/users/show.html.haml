@@ -6,7 +6,7 @@
       - if @user.image?
         = image_tag @user.image_url, class: "profImage"
       - else
-        %image.icon{alt: "ユーザーアイコン", src: "/assets/default.png",width:"200px",height:"200px"}
+        = image_tag asset_path("default.png"), class: "default-icon"
     .userPage__contents__left__userInfo
       = render "relationships/follow_button", user:@user
       - if user_signed_in? && current_user.id == @user.id

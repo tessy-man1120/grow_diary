@@ -1,9 +1,8 @@
 .postShow-contents
-  .postImage
-    - if @post.image?
+  - if @post.image?
+    .postImage
       = image_tag @post.image_url, class:"postImage--inner"
-    - else
-      No Image
+  - else
   .postTitle
     = @post.title
   .postDate
@@ -27,9 +26,13 @@
   .postTag
     - @post.tags.each do |tag|
       %span.tagItem
-        = link_to tag.name, tag_path(tag.id), class: "tagItem--name"
-  .postLikeIcon--foot
+        = link_to "##{tag.name}", tag_path(tag.id), class: "tagItem--name"
+  .postReaction
     = render "likes/like_button"
+    .postTwitterIcon
+      =link_to "http://twitter.com/share?url=#{request.url}/&hashtags=MyGrowDiary",{class:"footer-icon_1"} do
+        %i.fab.fa-twitter.twitter
+      .fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-size" => "large"} 
   = render "posts/comment"
 
 

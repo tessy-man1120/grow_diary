@@ -1,6 +1,28 @@
 %footer.footer
   .cover
-
+.contentIntro
+  .contentIntro__aboutMe
+    %h2 About Me
+    -# %img.contentIntro__aboutMe--image{alt: "Profile image", src: "/assets/23963640-EA26-402D-906D-E420615A10AA"}/
+    = image_tag asset_path("23963640-EA26-402D-906D-E420615A10AA.png"), class: "myimage"
+    %h3 Kento Teshima
+    .contentIntro__aboutMe--text
+      %p スーツ販売員からエンジニアへ
+      %p 生まれも育ちも横浜です。
+      %p ファッション、銭湯、ビール、ドライブ、たまにゴルフ
+    .contentIntro__aboutMe--link
+      = link_to "https://www.instagram.com/tessy_man/", class:"link-insta" do
+        %i.fab.fa-instagram-square
+      = link_to "https://twitter.com/Ktessyman", class:"link-twitter" do
+        %i.fab.fa-twitter-square
+  .contentIntro__git
+    %h2 This App
+    .contentIntro__git--icon
+      %i.fab.fa-github
+    %h3 MyGrowDiary
+    .contentIntro__git--text
+      %p GitHubにてこちらのソースコードを公開しております。
+      %a{href: "https://github.com/tessy-man1120/grow_diary", class:"github-link"}tessy-man1120/grow_diary
 .company
   .company-logo
     %p TessyMan Company

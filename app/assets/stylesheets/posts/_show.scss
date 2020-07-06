@@ -90,10 +90,40 @@
     background-color:$white;
     overflow: scroll;
   }
-  .postLikeIcon{
-    &--foot {
-      padding-left: 20px;
+  .postTag{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    .tagItem {
+      color: $white;
+      font-size: 20px;
+      text-align: center;
+      line-height: 40px;
+      background-color: $gray;
+      border-radius: 4px;
+      margin: 0 4px;
+      padding: 4px 8px;
+      &--name{
+        text-decoration: none;
+        color: $white;
+      }
+      &:hover{
+        opacity: 0.8;
+        }
     }
+  }
+  .postReaction{
+    margin-top: 20px;
+    display:flex;
+    padding-left: 20px;
+  }
+  .footer-icon_1 {
+    font-size: 24px;
+    color: $white;
+    background-color: #55acee;
+    padding: 10px 10px;
+    border-radius: 50px;
+    margin-left: 20px;
   }
 }
 

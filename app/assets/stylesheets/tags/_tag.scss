@@ -111,28 +111,6 @@
   }
 }
 
-.postTag{
-  width: 90%;
-  height: 50px;
-  margin: auto;
-  .tagItem {
-    color: $white;
-    text-align: center;
-    line-height: 40px;
-    background-color: $gray;
-    border-radius: 4px;
-    margin: 0 4px;
-    padding: 4px 8px;
-    &--name{
-      text-decoration: none;
-      color: $white;
-    }
-    &:hover{
-      opacity: 0.8;
-      }
-  }
-}
-
 .tagTitle {
   font-size: 28px;
   font-weight: bold;
