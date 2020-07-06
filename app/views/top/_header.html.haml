@@ -7,7 +7,6 @@
       = link_to "TAGS", tags_path, class: "header__right--btn"
       = link_to "ALLPOSTS", posts_path, class: "header__right--btn"
       = link_to "NEWPOST", new_post_path, class: "header__right--btn"
-      = link_to "Sign Out", destroy_user_session_path, method: :delete, class: "logoutBtn"
     - else
       = link_to "ALLPOSTS", posts_path, class: "header__right--btn"
       = link_to "LOGIN", new_user_session_path, class: "header__right--btn"

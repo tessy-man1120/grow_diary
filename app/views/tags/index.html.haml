@@ -2,9 +2,9 @@
   .tagTitle
     %h2 All List of Tags
   .tagShows
-    -# - @tags.each do |tag|
-    -#   .tagShow
-    -#     = link_to tag.name, tag_path(tag.id), class: "tagShow--name"
+    - @tags.each do |tag|
+      .tagShow
+        = link_to tag.name, tag_path(tag.id), class: "tagShow--name"
     .tagContents
       .content-one
         = link_to @tags[0]["name"], tag_path(tag.id[0]), class: "tagShows--name"
