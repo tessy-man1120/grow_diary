@@ -45,7 +45,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
-  #S3導入時にコメントアウト解除
   if Rails.env.development? || Rails.env.test?
     storage :file
   else

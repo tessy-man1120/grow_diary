@@ -33,11 +33,17 @@
       .link-insta{
         text-decoration: none;
         color: $black;
+        &:hover {
+          color: $blue;
+        }
       }
       .link-twitter{
         text-decoration: none;
         color: $black;
         margin-left: 20px;
+        &:hover {
+          color: $blue;
+        }
       }
     }
   }
