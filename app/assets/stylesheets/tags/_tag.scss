@@ -6,21 +6,19 @@
     text-align: center;
     margin: auto;
     border-bottom: 1px solid $gray;
-    height: 80px;
-    line-height: 80px;
+    height: 100px;
+    line-height: 100px;
   }
 
   .tagShows {
-    margin: 50px auto;
-    &--name{
-      display: inline-block;
-      text-decoration: none;
-      color: $black;
-      background-color: $white;
-      margin-top: 5px;
-      padding: 5px 40px;
-      opacity: 0.8;
-      border-radius: 25px;
+    .tagContents{
+      margin: 50px auto;
+      color: $white;
+      font-weight: bold;
+      font-size: 24px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
     .tagContents{
       color: $white;
@@ -114,6 +112,9 @@
 .tagTitle {
   font-size: 28px;
   font-weight: bold;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
 }
 .showTagPost {
   margin: auto;
@@ -127,10 +128,6 @@
         height: 55px;
         width: 55px;
         border: solid 1px;
-      }
-      .sml-img {
-        height: 100%;
-        width: 100%;
       }
     }
     &__right {
@@ -169,4 +166,3 @@
     }
   }
 }
-
