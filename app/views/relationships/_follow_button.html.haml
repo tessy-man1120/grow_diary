@@ -1,7 +1,23 @@
 - if user_signed_in? 
   .followerCount
-    %p= "Following: #{@user.follower.count}"
-    %p= "Followers: #{@user.followed.count}"
+    %a.followInfo-btn{"data-id"=>"1"}
+      = "Following: #{@user.follower.count}"
+    %section#modalArea.modalArea{"data-id"=>"modal1"}
+      #modalBg.modalBg
+      .modalWrapper
+        .modalContents
+          = render "relationships/following_modal"
+          #closeModal.closeModal
+            ×
+    %a.followInfo-btn{"data-id"=>"2"}
+      = "Followers: #{@user.followed.count}"
+    %section#modalArea.modalArea{"data-id"=>"modal2"}
+      #modalBg.modalBg
+      .modalWrapper
+        .modalContents
+          = render "relationships/follower_modal"
+          #closeModal.closeModal
+            ×
   - unless user_signed_in? && current_user.id == @user.id
     - if current_user.following?(@user)
       = link_to 'Following', unfollow_path(user.id), class: 'unFollowBtn', method: :POST 

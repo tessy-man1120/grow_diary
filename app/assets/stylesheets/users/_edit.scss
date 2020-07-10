@@ -2,12 +2,29 @@
   font-size: 18px;
 }
 .edit-content__nickname,
-.edit-content__image,
 .edit-content__email,
 .edit-content__profile {
   border-bottom: 1px solid $gray;
   width: 80%;
   margin: auto;
+}
+.edit-content__image {
+  border-bottom: 1px solid $gray;
+  width: 80%;
+  margin: auto;
+  &--box{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    .pre-image{
+      width: 100%;
+      height: 100%;
+    }
+    .default-icon{
+      font-size: 200px;
+      line-height: 250px;
+    }
+  }
 }
 
 .user_nickname-box,

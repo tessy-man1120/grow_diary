@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(10)
+    # @post = 
+    # @comment_count = Comment.where(post_id: @post.id).count
     # @like_count = Like.where(post_id: @post.id).count
   end
 
@@ -20,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
     @comment_count = Comment.where(post_id: @post.id).count
@@ -28,27 +30,24 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    post = Post.find(params[:id])
-    post.update(post_params)
-    redirect_to posts_path(post.id)
+    @post.update(post_params)
+    redirect_to posts_path(@post.id)
   end
 
   def destroy
-    post = Post.find(params[:id])
-    post.destroy
+    @post.destroy
     redirect_to posts_path
   end
 
   def search
     @posts = Post.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(10)
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json
+    # end
   end
 
   private
@@ -58,6 +57,10 @@ class PostsController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless user_signed_in?
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 end

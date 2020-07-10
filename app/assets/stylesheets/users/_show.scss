@@ -29,14 +29,25 @@
         height: 100%;
       }
       .default-icon {
-        width: 100%;
-        height: 100%;
+        font-size: 200px;
+        line-height: 250px;
       }
     }
     &__userInfo {
       display: left;
       .followerCount {
-        margin: 20px 0;
+        font-weight: bold;
+        color: $black;
+        .followInfo-btn{
+          width: 150px;
+          margin: 20px 0;
+          display: block;
+          cursor: pointer;
+          &:hover {
+            color: $blue;
+          }
+          
+        }
       }
       &--prof {
         &--text{
@@ -93,25 +104,3 @@
     }
 }
 
-.userPage__bottom {
-  width: 80%;
-  margin: 50px auto 100px auto;
-  display: flex;
-  justify-content: center;
-  &__left{
-    width: 50%;
-    text-align: center;
-  }
-  &__right{
-    width: 50%;
-    text-align: center;
-  }
-  .userNickname {
-    text-decoration: none;
-    color: $black;
-    font-size: 20px;
-    &:hover {
-      color: $blue;
-    }
-  }
-}

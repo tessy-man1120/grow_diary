@@ -1,121 +1,39 @@
 .tags-wrapper {
   width: 80%;
-  text-align: center;
   margin: auto;
   .tagTitle {
+    font-size: 28px;
+    font-weight: bold;
     text-align: center;
-    margin: auto;
-    border-bottom: 1px solid $gray;
     height: 100px;
     line-height: 100px;
+    border-bottom: 1px solid $gray;
   }
-
   .tagShows {
-    .tagContents{
+    &__contents {
       margin: 50px auto;
-      color: $white;
-      font-weight: bold;
-      font-size: 24px;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      &--content {
+        background-color: $gray;
+        padding: 5px 10px;
+        border-radius: 4px;
+        color: $white;
+        margin: 10px;
+        &:hover {
+          opacity: 0.8;
+        }
+        &--name {
+          text-decoration: none;
+          color: $white;
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
     }
-    .tagContents{
-      color: $white;
-      font-weight: bold;
-      font-size: 24px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      .content-one{
-        background-image: url("https://picjumbo.com/wp-content/uploads/luxury-silver-pen-with-a-business-diary_free_stock_photos_picjumbo_IMG_3242-2210x1473.jpg");
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        margin: 20px;
-        transition: 1.0s;
-        &:hover{
-          opacity: 0.6;
-          background-color: $gray;
-        }
-      }
-      .content-two{
-        background-image: url("https://picjumbo.com/wp-content/uploads/4th-of-july-1080x720.jpg");
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        margin: 20px;
-        transition: 1.0s;
-        &:hover{
-          opacity: 0.6;
-          background-color: $gray;
-        }
-      }
-      .content-three{
-        background-image: url("https://picjumbo.com/wp-content/uploads/man-reading-notes-from-his-notebook-1080x720.jpg");
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        margin: 20px;
-        transition: 1.0s;
-        &:hover{
-          opacity: 0.6;
-          background-color: $gray;
-        }
-      }
-      .content-four{
-        background-image: url("https://picjumbo.com/wp-content/uploads/DSC04444-2210x1473.jpg");
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        margin: 20px;
-        transition: 1.0s;
-        &:hover{
-          opacity: 0.6;
-          background-color: $gray;
-        }
-      }
-      .content-five{
-        background-image: url("https://picjumbo.com/wp-content/uploads/couple-having-a-summer-picnic-1080x1620.jpg");
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        margin: 20px;
-        transition: 1.0s;
-        &:hover{
-          opacity: 0.6;
-          background-color: $gray;
-        }
-      }
-      .content-six{
-        background-image: url("https://picjumbo.com/wp-content/uploads/fist-bump-with-cordwainer-statue-london-1080x721.jpg");
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        margin: 20px;
-        transition: 1.0s;
-        &:hover{
-          opacity: 0.6;
-          background-color: $gray;
-        }
-      }
     }
   }
-}
-
-.tagTitle {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  height: 100px;
-  line-height: 100px;
-}
 .showTagPost {
   margin: auto;
   .content {

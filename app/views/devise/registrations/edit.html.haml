@@ -8,10 +8,13 @@
         = f.text_field :nickname, class:"user_nickname-box",autofocus: true, autocomplete: "nickname"
       .edit-content__image
         = f.label :image
-        %br/
-        = image_tag @user.image.url if @user.image?
-        %br/
-        = f.file_field :image
+        .edit-content__image--box
+          - if @user.image?
+            = image_tag @user.image.url , class:"pre-image"
+          - else
+            = icon("far", "laugh", class: "default-icon")
+        = f.file_field  :image, id: "post_img"
+        
       .edit-content__email
         = f.label :email, class:"user_email-box"
         = f.email_field :email, autofocus: true, autocomplete: "email"
