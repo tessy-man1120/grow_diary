@@ -1,8 +1,8 @@
 Tag.create([
   { name: "Diary"},
-  { name: "Hobby"},
   { name: "Work"},
+  { name: "Code"},
+  { name: "Recruit"},
   { name: "MySelf"},
-  { name: "Holiday"},
-  { name: "Relationship"}
+  
 ])
