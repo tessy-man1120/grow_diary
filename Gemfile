@@ -83,3 +83,6 @@ gem 'mini_magick'
 
 gem 'jquery-rails'
 gem "kaminari"
+
+gem "redcarpet", "~> 2.3.0"
+gem 'coderay'

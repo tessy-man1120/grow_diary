@@ -22,7 +22,7 @@
       = link_to "Edit", edit_post_path(@post.id), class: "postManage__edit"
       = link_to "Delete", post_path(@post.id), method: :delete, class: "postManage__delete"
   .postText
-    = simple_format @post.text
+    = html @post.text
   .postTag
     - @post.tags.each do |tag|
       %span.tagItem
