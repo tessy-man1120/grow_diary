@@ -2,23 +2,34 @@
   .top-message
     %h2 MyGrowDairy
     .text
-      %p 毎日の積み上げを記録しよう
+      %p 毎日の出来事を記録しよう
 
 .main-contents
-  .lessons
-    .lessons__item
+  .lessonsOne
+    .lessonsOne__item
       = icon("fas", "calendar", class: "icon")
       %h2 Diary
       %br
-      %p 毎日の学習記録を残そう
-    .lessons__item
+      %p 毎日の記録を残そう
+    .lessonsOne__item
       = icon("fas", "comment", class: "icon")
       %h2 Comment
       %br
-      %p 頑張る人を応援しよう
-    .lessons__item
+      %p みんなとお話をしよう
+    .lessonsOne__item
       = icon("fas", "tag", class: "icon")
       %h2 Tag
       %br
       %p 仲間と情報を共有しよう
-= render "top/footer"
+  .lessonsTwo
+    .lessonsTwo__item
+      = icon("fas", "people-arrows", class: "icon")
+      %h2 Follow
+      %br
+      %p 仲間を見つけよう
+    .lessonsTwo__item
+      = icon("far", "thumbs-up", class: "icon")
+      %h2 Like
+      %br
+      %p リアクションをしよう
+  = render "top/footer"

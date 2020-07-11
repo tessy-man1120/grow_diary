@@ -1,7 +1,8 @@
 module ApplicationHelper  
   require "redcarpet"
-  require "coderay"
+  require 'rouge/plugins/redcarpet'
   class HTMLwithCoderay < Redcarpet::Render::HTML
+    include Rouge::Plugins::Redcarpet
     def block_code(code, language)
         language = language.split(':')[0]
 
@@ -39,5 +40,4 @@ module ApplicationHelper
   def html(markdown)
     @@markdown.render(markdown).html_safe
   end
-
 end

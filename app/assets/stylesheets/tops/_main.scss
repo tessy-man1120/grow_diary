@@ -28,13 +28,15 @@ body{
   .main-contents {
     font-family: 'Silom',sans-serif;
     margin: auto;
-    background-color: $gray;
+    // background-color: $gray;
     height: 500px;
-    width: 90%;
     }
-  .lessons{
+  .lessonsOne,
+  .lessonsTwo {
     display: flex;
     justify-content: space-around;
+    background-color: $black;
+    padding: 40px;
     &__item{
       background-color: $white;
       opacity: 0.8;
@@ -43,6 +45,7 @@ body{
       height: 500px;
       text-align: center;
       transition: all 0.5s;
+      // border-bottom: 10px solid $black;
       &:hover{
         background-color: $blue;
       }
@@ -56,6 +59,9 @@ body{
       }
     }
   }
+}
+.lessonsTwo{
+  margin-top: -40px;
 }
 //【未ログイン時】 新規登録用ボタン
 .regBtn {

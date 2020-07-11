@@ -17,7 +17,8 @@
         .modalContents
           = render "relationships/follower_modal"
           #closeModal.closeModal
-            ×
+            -# 二つ目のモダールが消せないため仮置き
+            = link_to '×', user_path(user.id), class:"closeModal-2"
   - unless user_signed_in? && current_user.id == @user.id
     - if current_user.following?(@user)
       = link_to 'Following', unfollow_path(user.id), class: 'unFollowBtn', method: :POST 
