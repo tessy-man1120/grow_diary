@@ -4,22 +4,22 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(10)
-    # @post = 
-    # @comment_count = Comment.where(post_id: @post.id).count
-    # @like_count = Like.where(post_id: @post.id).count
   end
 
   def new
     @post = Post.new
     if @post.save
       redirect_to posts_path
-    else
     end
   end
 
   def create
-    Post.create(post_params)
-    redirect_to posts_path
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to posts_path, notice:"Success new post"
+    else
+      redirect_to new_post_path, alert:"Failed new post"
+    end
   end
 
   def show
@@ -34,12 +34,12 @@ class PostsController < ApplicationController
 
   def update
     @post.update(post_params)
-    redirect_to posts_path(@post.id)
+    redirect_to posts_path(@post.id), notice: "Success post update"
   end
 
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path, alert: "Success post delete"
   end
 
   def search

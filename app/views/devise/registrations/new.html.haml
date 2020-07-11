@@ -20,3 +20,5 @@
           = f.password_field :password_confirmation, placeholder:"Enter the same again",autocomplete: "new-password"
         .actions
           = f.submit "Sign up", class:"registrations-btn"
+        .guestLogin-btn
+          = link_to 'Guest LogIn', top_guest_sign_in_path, class: "guestLogin-devise-text", method: :post

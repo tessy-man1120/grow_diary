@@ -34,3 +34,19 @@
     }
   }
 }
+
+.guestLogin-btn {
+  width: 36%;
+  height: 48px;
+  font-size: 16px;
+  margin: 20px auto;
+  border-radius: 4px;
+  background-color:$gray;
+  &:hover{
+    opacity: 0.8;
+  }
+  .guestLogin-devise-text{
+    text-decoration: none;
+    color: $white;
+  }
+}

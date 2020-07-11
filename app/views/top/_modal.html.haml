@@ -1,17 +1,21 @@
--# 新規投稿とログイン前は消しておく
 - if user_signed_in?
 - else
   .regBtn
     #openModal
-      ThisAPP
-    = icon("fas", "question-circle", class: "user-icon")
+      Guest Login
+    = icon("fas", "running", class: "user-icon")
   %section#modalArea.modalArea
     #modalBg.modalBg
     .modalWrapper
       .modalContents
         %h1 MyGrowDiaryへようこそ！
-        %p MyGrowDiaryはブログアプリです。
+        %p MyGrowDiaryはブログアプリです
         %p まずはSingUpをしてユーザー登録をしよう！
-        = link_to "Goto SignUp", new_user_registration_path, class:"in-modal-signup"
+        = link_to "SignUp", new_user_registration_path, class:"in-modal-signup"
+        %br
+        %br
+        %br
+        %p.guestInfo ※ゲストの方はこちらからログインしてください
+        = link_to 'Guest LogIn', top_guest_sign_in_path, class: "guestLogin", method: :post
       #closeModal.closeModal
         ×

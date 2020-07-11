@@ -5,8 +5,6 @@ class CommentsController < ApplicationController
       format.html { redirect_to post_path(params[:post_id])  }
       format.json
     end
-    # comment = Comment.create(comment_params)
-    # redirect_to "/posts/#{comment.post.id}"
   end
 
   private

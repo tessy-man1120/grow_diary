@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
-
+  post '/top/guest_sign_in', to: 'top#new_guest'
   root to: 'top#index'
   resources :posts do 
     resources :comments, only: [:create, :destroy]

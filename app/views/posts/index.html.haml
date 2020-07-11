@@ -4,6 +4,8 @@
 .contents
   - @posts.each do |post|
     .content
+      .content__left
+        = image_tag "#{post.user.image}"
       .content__right
         .content__right__top
           = link_to post.title, post_path(post.id), class: "posttitle"
@@ -11,9 +13,7 @@
           = link_to "@#{post.user.nickname}", user_path(post.user), class: "content__right__bottom--userName--btn"
           .content__right__bottom--date
             = post.created_at.strftime('%Y/%m/%d %H:%M') 
-          %i.far.fa-thumbs-up
-          -# = post.like_count
-          %i.far.fa-comment
-          = @comment_count
+          -# %i.far.fa-thumbs-up
+          -# %i.far.fa-comment
   .pagination-box
     = paginate(@posts)

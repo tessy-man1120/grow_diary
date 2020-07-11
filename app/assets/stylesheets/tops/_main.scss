@@ -63,15 +63,15 @@ body{
 .lessonsTwo{
   margin-top: -40px;
 }
-//【未ログイン時】 新規登録用ボタン
+
 .regBtn {
   border-radius: 4px;
   z-index: 1;
   text-align: center;
   display: block;
   position: fixed;
-  height: 120px;
-  width: 120px;
+  height: 150px;
+  width: 150px;
   background-color: $blue;
   color: $white;
   top:  480px;
@@ -83,9 +83,25 @@ body{
     cursor: pointer;
   }
   .user-icon {
-    padding-top: 8px;
+    padding-top: 15px;
+    text-align: center;
     display: block;
     color: $white;
-    font-size: 60px;
+    font-size: 80px;
   }
+}
+.guestInfo {
+  color: red;
+  font-weight: bold;
+}
+.guestLogin {
+  display: inline-block;
+  text-decoration: none;
+  color: $white;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: $blue;
+  padding: 12px 24px;
+  border-radius: 4px;
 }

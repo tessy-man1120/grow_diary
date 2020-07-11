@@ -76,8 +76,11 @@ gem 'pry-rails'
 
 gem 'font-awesome-sass'
 gem "devise"
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'haml-rails'
 gem 'carrierwave'
+
 gem 'fog-aws'
 gem 'mini_magick'
 

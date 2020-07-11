@@ -1,0 +1,22 @@
+.notice {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: $white;
+  font-weight: bold;
+  background-color: $blue;
+  opacity: 0.8;
+}
+.alert {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: $white;
+  font-weight: bold;
+  background-color:$red;
+  opacity: 0.8;
+}

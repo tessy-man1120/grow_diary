@@ -15,4 +15,6 @@
             = f.label :remember_me
         .actions
           = f.submit "Log in", class:"registrations-btn"
+        .guestLogin-btn
+          = link_to 'Guest LogIn', top_guest_sign_in_path, class: "guestLogin-devise-text", method: :post
       -# = render "devise/shared/links"

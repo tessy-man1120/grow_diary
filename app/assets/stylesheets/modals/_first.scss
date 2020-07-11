@@ -40,7 +40,10 @@
 .in-modal-signup {
   text-decoration: none;
   font-weight: bold;
-  color: $blue;
+  color: $white;
+  padding: 6px 12px;
+  background-color: $gray;
+  border-radius: 4px;
 }
 
 .userNickname{
