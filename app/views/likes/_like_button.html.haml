@@ -7,4 +7,7 @@
     = link_to post_likes_path(@post), class: "likeNo", method: :post do
       %i.far.fa-thumbs-up
       = @like_count
-
+- else
+  .likeIcon
+    %i.far.fa-thumbs-up
+      = @like_count
