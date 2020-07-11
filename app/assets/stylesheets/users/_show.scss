@@ -60,6 +60,9 @@
           border-top: 1px solid $gray;
           border-bottom: 1px solid $gray;
           overflow: scroll;
+          p {
+            line-height: 2;
+          }
         }
       }
       .editProfText {

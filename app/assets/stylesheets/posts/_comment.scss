@@ -9,11 +9,18 @@
     margin-bottom: 20px;
   }
   &__text {
-    padding-left: 10px;
+    margin-top: 10px;
     background-color: $white;
-    margin: 5px 30px;
+    padding: 5px 10px;
+    &__time {
+      display: flex;
+      justify-content: space-between;
+      .commentDelete {
+        text-decoration: none;
+        color: $red;
+      }
+    }
   }
-  
 }
 .container {
   margin: 0 auto 50px auto;
@@ -37,5 +44,13 @@
   color: $white;
   &:hover {
     opacity: 0.8;
+  }
+}
+.userComment {
+  text-decoration: none;
+  color: $black;
+  font-weight: bold;
+  &:hover {
+    color: $blue;
   }
 }

@@ -15,7 +15,7 @@ ja:
         email: "Email"
         password: "Password"
         password_confirmation: "確認用パスワード"
-        remember_me: "ログインを記憶"
+        remember_me: "Remember login"
         nickname: "Nickname"
 
     models:

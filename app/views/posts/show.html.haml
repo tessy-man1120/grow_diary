@@ -33,10 +33,4 @@
       =link_to "http://twitter.com/share?url=#{request.url}/&hashtags=MyGrowDiary",{class:"footer-icon_1"} do
         %i.fab.fa-twitter.twitter
       .fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-size" => "large"} 
-  = render "posts/comment"
-
-
-
--# マークダウン記法で表示させたい仮置き
--# :javascript
--#   var easyMDE = new EasyMDE({element: $('.postText')[0]});
+  = render "comments/comment"
