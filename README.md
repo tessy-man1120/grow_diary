@@ -13,8 +13,7 @@ My Grow Diary
 
 ## Image
 
-<img width="387" alt="スクリーンショット 2020-07-11 21 02 43" src="https://user-images.githubusercontent.com/64174311/87223811-0184c300-c3bb-11ea-9610-d45625aa30a5.png">　<img width="380" alt="スクリーンショット 2020-07-11 21 40 47" src="https://user-images.githubusercontent.com/64174311/87224370-b6b97a00-c3bf-11ea-940a-3b38cb5f9048.png">
-
+<img width="387" alt="スクリーンショット 2020-07-11 21 02 43" src="https://user-images.githubusercontent.com/64174311/87223811-0184c300-c3bb-11ea-9610-d45625aa30a5.png">　<img width="384" alt="スクリーンショット 2020-07-12 17 00 34" src="https://user-images.githubusercontent.com/64174311/87241779-5bd85f00-c461-11ea-9476-e2ca474ac4bb.png">
 
 ## Functions
 
@@ -50,3 +49,12 @@ Nginx, Unicorn
 
 <img width="622" alt="スクリーンショット 2020-07-11 20 45 30" src="https://user-images.githubusercontent.com/64174311/87223382-7f46cf80-c3b7-11ea-8d0f-e15732e3a061.png">
 
+## 課題、今後実装したい機能
+
+自身の記録を残すことに関してメモアプリのようになってしまっている。  
+検索機能やユーザー同士の交流ができるような機能を増やし情報共有が行える機能を加えていきたいと考えております。
+
+検索機能の充実  
+下書き機能  
+ブックマーク機能  
+レスポンシブデザイン
