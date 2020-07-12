@@ -4,6 +4,8 @@ ja:
       models:
         user:
           attributes:
+            nickname:
+              blank: "が入力されていません。"
             email:
               blank: "が入力されていません。"
             password:
