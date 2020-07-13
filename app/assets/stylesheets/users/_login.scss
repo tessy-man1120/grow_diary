@@ -26,12 +26,8 @@
     height: 48px;
     font-size: 16px;
     margin: 40px 0;
-    border-radius: 4px;
-    background-color:$blue;
-    color: $white;
-    &:hover{
-      opacity: 0.8;
-    }
+    @include btnBlue;
+    @include hvOpacity;
   }
 }
 
@@ -40,13 +36,9 @@
   height: 48px;
   font-size: 16px;
   margin: 20px auto;
-  border-radius: 4px;
-  background-color:$gray;
-  &:hover{
-    opacity: 0.8;
-  }
+  @include btnGray;
+  @include hvOpacity;
   .guestLogin-devise-text{
-    text-decoration: none;
-    color: $white;
+    @include linkTextWhite;
   }
 }

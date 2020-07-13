@@ -1,7 +1,5 @@
 .search-form {
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
+  @include lineHeight;
   width: 80%;
   margin: auto;
   .search-input {

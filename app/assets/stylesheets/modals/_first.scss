@@ -40,17 +40,12 @@
 .in-modal-signup {
   text-decoration: none;
   font-weight: bold;
-  color: $white;
   padding: 6px 12px;
-  background-color: $gray;
-  border-radius: 4px;
+  @include btnGray;
 }
 
 .userNickname{
-  text-decoration: none;
-  color: $gray;
   font-size: 18px;
-  &:hover{
-    color: $blue;
-  }
+  @include linkTextGray;
+  @include hvBlue;
 }

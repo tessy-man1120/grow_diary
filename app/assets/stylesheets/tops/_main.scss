@@ -28,7 +28,6 @@ body{
   .main-contents {
     font-family: 'Silom',sans-serif;
     margin: auto;
-    // background-color: $gray;
     height: 500px;
     }
   .lessonsOne,
@@ -45,7 +44,6 @@ body{
       height: 500px;
       text-align: center;
       transition: all 0.5s;
-      // border-bottom: 10px solid $black;
       &:hover{
         background-color: $blue;
       }
@@ -65,19 +63,17 @@ body{
 }
 
 .regBtn {
-  border-radius: 4px;
   z-index: 1;
   text-align: center;
   display: block;
   position: fixed;
   height: 150px;
   width: 150px;
-  background-color: $blue;
-  color: $white;
   top:  480px;
   right: 80px;
   padding: 4px;
   opacity: 0.9;
+  @include btnBlue;
   &:hover {
     opacity: 1;
     cursor: pointer;
@@ -97,11 +93,9 @@ body{
 .guestLogin {
   display: inline-block;
   text-decoration: none;
-  color: $white;
   margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
-  background-color: $blue;
   padding: 12px 24px;
-  border-radius: 4px;
+  @include btnBlue;
 }

@@ -1,21 +1,13 @@
 .unFollowBtn {
-  background-color: $blue;
-  border-radius: 4px;
-  color: $white;
   margin-top: 20px;
   padding: 4px 8px;
-  &:hover {
-    opacity: 0.8;
-  }
+  @include btnBlue;
+  @include hvOpacity;
 }
 
 .followBtn {
-  background-color: $gray;
-  border-radius: 4px;
-  color: $white;
   margin-top: 20px;
   padding: 4px 8px;
-  &:hover {
-    opacity: 0.8;
-  }
+  @include btnGray;
+  @include hvOpacity;
 }

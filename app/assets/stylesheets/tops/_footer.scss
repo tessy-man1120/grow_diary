@@ -30,19 +30,13 @@
       font-size: 40px;
       margin: auto;
       .link-insta{
-        text-decoration: none;
-        color: $black;
-        &:hover {
-          color: $blue;
-        }
+        @include linkTextBlack;
+        @include hvBlue;
       }
       .link-twitter{
-        text-decoration: none;
-        color: $black;
+        @include linkTextBlack;
         margin-left: 20px;
-        &:hover {
-          color: $blue;
-        }
+        @include hvBlue;
       }
     }
   }
@@ -54,8 +48,7 @@
       font-size: 150px;
     }
     .github-link {
-      text-decoration: none;
-      color: $gray;
+      @include linkTextGray;
       transition: all 0.1s;
       &:hover {
         color: $black;

@@ -5,10 +5,44 @@ $black: #212121 !global;
 $gray: #757575 !global;
 $red: #DC143C !global;
 
-// ボタン関連
+// ホバー関連
+@mixin hvOpacity {
+  &:hover{
+    opacity: 0.8;
+  }
+}
+@mixin hvBlue {
+  &:hover {
+    color:$blue;
+  }
+}
 
-// タイトルの高さ
+@mixin btnBlue {
+  border-radius: 4px;
+  background-color:$blue;
+  color: $white;
+}
+@mixin btnGray {
+  border-radius: 4px;
+  background-color:$gray;
+  color: $white;
+}
 
+@mixin linkTextBlack {
+  text-decoration: none;
+  color: $black;
+}
+@mixin linkTextWhite {
+  text-decoration: none;
+  color: $black;
+}
+@mixin linkTextGray {
+  text-decoration: none;
+  color: $gray;
+}
 
-
-
+@mixin lineHeight {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}

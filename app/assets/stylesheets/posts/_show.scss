@@ -34,16 +34,12 @@
       .postInfo__nickname {
         font-size: 24px;
         font-weight: bold;
-        text-decoration: none;
-        color: $black;
-        &:hover{
-          color:$blue;
-        }
+        @include linkTextBlack;
+        @include hvBlue;
       }
     }
     &__commentIcon{
-      text-decoration: none;
-      color: $black;
+      @include linkTextBlack;
       font-size: 24px;
       margin-left: 20px;
     }
@@ -59,29 +55,21 @@
     margin-top: 10px;
     &__edit{
       display: block;
-      border-radius: 4px;
-      color: $white;
       padding: 4px 12px;
       text-decoration: none;
       margin-right: 10px;
-      background-color:$blue;
-      color: $white;
-      &:hover{
-        opacity: 0.8;
-      }
+      @include btnBlue;
+      @include hvOpacity;
     }
     &__delete{
       display: block;
       border-radius: 4px;
       color: $white;
-      padding: 4px 12px;
-      text-decoration: none;
-      margin-left: 10px;
       background-color: $red;
-      color: $white;
-      &:hover{
-        opacity: 0.8;
-      }
+      padding: 4px 12px;
+      margin-left: 10px;
+      @include linkTextWhite;
+      @include hvOpacity;
     }
   }
   .postText{
@@ -95,21 +83,16 @@
     height: 50px;
     margin: auto;
     .tagItem {
-      color: $white;
       font-size: 20px;
       text-align: center;
       line-height: 40px;
-      background-color: $gray;
-      border-radius: 4px;
       margin: 0 4px;
       padding: 4px 8px;
+      @include btnGray;
       &--name{
-        text-decoration: none;
-        color: $white;
+        @include linkTextWhite;
       }
-      &:hover{
-        opacity: 0.8;
-        }
+      @include hvOpacity;
     }
   }
   .postReaction{
@@ -117,6 +100,7 @@
     display:flex;
     padding-left: 20px;
   }
+  // Twitterのアイコン
   .footer-icon_1 {
     font-size: 24px;
     color: $white;

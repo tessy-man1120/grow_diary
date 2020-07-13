@@ -1,6 +1,5 @@
 .header{
   font-family: 'Silom',sans-serif;
-  opacity: 0.9;
   height: 100px;
   width: 100%;
   padding: 0 150px;
@@ -8,28 +7,23 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 15px solid $black;
+  opacity: 0.9;
   &__title{
     display: block;
     font-size: 30px;
     line-height: 100px;
     transition: all 0.1s;
     &--text{
-      text-decoration: none;
-      color: $black;
-      &:hover {
-        color:$blue;
-      }
+      @include linkTextBlack;
+      @include hvBlue;
     }
   }
   &__right{
     &--btn{
-      text-decoration: none;
       line-height: 100px;
       margin-left:15px;
-      color: $black;
-      &:hover {
-        color:$blue;
-      }
+      @include linkTextBlack;
+      @include hvBlue;
     }
   }
 }

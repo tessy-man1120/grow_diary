@@ -1,6 +1,5 @@
 .likeNo {
-  text-decoration: none;
-  color: $black;
+  @include linkTextBlack;
   font-size: 24px;
 }
 
