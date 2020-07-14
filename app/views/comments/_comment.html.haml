@@ -16,8 +16,8 @@
     - if current_user
       .form-title
       = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
-        = form.text_area :text, placeholder: "Type a Comment", rows: "10", class: "textbox"
-        = form.submit "SEND", class: "form__submit"
+        = form.text_area :text, placeholder: "Type a Comment", rows: "5", class: "textbox"
+        = form.submit "Comment", class: "form__submit"
     - else
       %strong
         %p ※※※ 新規登録/ログインでコメントすることができます。 ※※※
