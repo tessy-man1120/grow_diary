@@ -4,7 +4,6 @@ $blue: #03A9F4 !global;
 $black: #212121 !global;
 $gray: #757575 !global;
 $red: #DC143C !global;
-
 // ホバー関連
 @mixin hvOpacity {
   &:hover{
@@ -16,7 +15,7 @@ $red: #DC143C !global;
     color:$blue;
   }
 }
-
+// ボタン関連
 @mixin btnBlue {
   border-radius: 4px;
   background-color:$blue;
@@ -27,20 +26,20 @@ $red: #DC143C !global;
   background-color:$gray;
   color: $white;
 }
-
+// リンクのテキスト
 @mixin linkTextBlack {
   text-decoration: none;
   color: $black;
 }
 @mixin linkTextWhite {
   text-decoration: none;
-  color: $black;
+  color: $white;
 }
 @mixin linkTextGray {
   text-decoration: none;
   color: $gray;
 }
-
+// 高さ調整
 @mixin lineHeight {
   height: 100px;
   line-height: 100px;

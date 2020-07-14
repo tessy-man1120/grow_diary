@@ -16,5 +16,6 @@
     - flash.each do |key, value|
       = content_tag(:div, value, class: key)
     = render "top/modal"
+    = icon("fas", "arrow-up", class:"back-to-top")
     = yield
 
