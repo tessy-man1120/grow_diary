@@ -2,7 +2,7 @@
   .tagTitle
     = @tag.name
   .contents
-    - @tag.posts.each do |post|
+    - @post.each do |post|
       .content
         .content__left
           - if post.user.image?
@@ -20,3 +20,5 @@
               = post.likes.count
             %i.far.fa-comment
               = post.comments.count
+  .pagination-box
+    = paginate(@post)
