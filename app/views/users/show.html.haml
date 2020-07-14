@@ -26,6 +26,10 @@
             = link_to post.title, post_path(post.id), class:"postTitle"
           .userPage__content__right__posts__box--time
             = post.created_at.strftime('%Y/%m/%d %H:%M')
+            %i.far.fa-thumbs-up
+              = post.likes.count
+            %i.far.fa-comment
+              = post.comments.count
     .pagination-box
       = paginate(@posts)
 
