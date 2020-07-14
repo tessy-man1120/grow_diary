@@ -4,15 +4,13 @@
   - if @comments
     - @comments.each do |comment|
       .comments__text
-        %p
-          = link_to "@#{comment.user.nickname}", "/users/#{comment.user_id}", class:"userComment"
-          ：
-          = comment.text
-        .comments__text__time
+        .comments__text--first
+          = link_to "@#{comment.user.nickname}", "/users/#{comment.user_id}", class:"commentUser"
           = comment.created_at.strftime('%Y/%m/%d %H:%M')
           - if current_user == comment.user
             .comments__destroy
-              = link_to "Delete", post_comment_path(comment.post.id, comment.id),class:"commentDelete", method: :delete
+            = link_to "Delete", post_comment_path(comment.post.id, comment.id),class:"commentDelete", method: :delete
+        = simple_format comment.text, class:"commentText"
 .container
   .form-box
     - if current_user

@@ -10,14 +10,21 @@
   }
   &__text {
     margin-top: 10px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     background-color: $white;
-    &__time {
+    &--first{
       display: flex;
-      justify-content: space-between;
+      margin-left: auto;
+      .commentUser {
+        padding-right: 20px;
+        font-weight: bold;
+        @include linkTextBlack;
+        @include hvBlue;
+      }
       .commentDelete {
+        padding-left: 20px;
         text-decoration: none;
-        color: $red;
+        color: $red; 
       }
     }
   }
@@ -42,9 +49,4 @@
   color: $white;
   @include btnBlue;
   @include hvOpacity;
-}
-.userComment {
-  font-weight: bold;
-  @include linkTextBlack;
-  @include hvBlue;
 }
