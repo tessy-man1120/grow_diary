@@ -11,10 +11,11 @@
       = render "relationships/follow_button", user:@user
       .userPage__contents__left__currentUser--box
       - if user_signed_in? && current_user.id == @user.id
-        -# %buttun.likePost-box-btn
-        -#   = link_to "Liked Posts", "#", class:"likedPostsText"
-        %buttun.editProf-box-btn
-          = link_to "Edit Your Profile", edit_user_registration_path, class: "editProfText"
+        .userPage__contents__left__userInfo--show
+          %buttun.likedPostsText Liked Posts
+          %buttun.allPostsText My Posts
+        .userPage__contents__left__userInfo--edit
+          = link_to "Edit Profile", edit_user_registration_path, class: "editProfText"
           = link_to "Sign Out", destroy_user_session_path, method: :delete, class: "logoutBtn"
       %h4 Profile
       .userPage__contents__left__userInfo--prof
@@ -33,6 +34,18 @@
               = post.likes.count
             %i.far.fa-comment
               = post.comments.count
+    .userPage__contents__right__likes
+      .userPage__contents__right__posts
+      - @likes.each do |like|
+        .userPage__contents__right__posts__box
+          .userPage__content__right__posts__box--title
+            = link_to like.post.title, post_path(like.post.id), class:"postTitle"
+          .userPage__content__right__posts__box--time
+            = like.post.created_at.strftime('%Y/%m/%d %H:%M')
+            %i.far.fa-thumbs-up
+              = like.post.likes.count
+            %i.far.fa-comment
+              = like.post.comments.count
     .pagination-box
       = paginate(@posts)
 

@@ -1,4 +1,4 @@
-// 上までのスクロール
+// // 上までのスクロール
 $(document).ready(function(){
     $(window).scroll(function() {
         if($(this).scrollTop() > 100) { 
@@ -12,17 +12,17 @@ $(document).ready(function(){
     });
 });
 
-// コメント欄へのスクロール
-$(function(){
-    function ScrollButton(button, place){
-    var position = $(place).offset().top;  
-    $(button).click(function(){
-        $("html,body").animate({
-            scrollTop : position
-        }, {
-            queue : false
-        });
-    });
-    }
-    ScrollButton(".postInfo__commentIcon", ".comments__title");
-    });
+// // コメント欄へのスクロール
+// $(function(){
+//     function ScrollButton(button, place){
+//     var position = $(place).offset().top;
+//     $(button).click(function(){
+//         $("html,body").animate({
+//             scrollTop : position
+//         }, {
+//             queue : false
+//         });
+//     });
+//     }
+//     ScrollButton(".postInfo__commentIcon", ".comments__title");
+//     });

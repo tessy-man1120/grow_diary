@@ -47,6 +47,39 @@
           @include hvBlue;
         }
       }
+      &--show {
+        display: flex;
+        margin-bottom: 20px;
+        .likedPostsText,
+        .allPostsText {
+          color: $white;
+          font-weight: bold;
+          background-color: $gray;
+          border-radius: 4px;
+          padding: 4px 8px;
+          margin-right: 10px;
+          cursor: pointer;
+          @include hvOpacity;
+        }
+      }
+      &--edit {
+        display: flex;
+        font-weight: bold;
+        .editProfText {
+          text-decoration: none;
+          padding: 4px 8px;
+          margin-right: 10px;
+          @include btnBlue;
+          @include hvOpacity;
+        }
+        .logoutBtn {
+          background-color: #DC143C;
+          padding: 4px 8px;
+          border-radius: 4px;
+          @include linkTextWhite;
+          @include hvOpacity;
+        }
+      }
       &--prof {
         &--text{
           height: 300px;
@@ -59,21 +92,6 @@
           }
         }
       }
-      .editProfText {
-        text-decoration: none;
-        padding: 4px 8px;
-        margin-top: 20px;
-        @include btnBlue;
-        @include hvOpacity;
-      }
-      .logoutBtn {
-        background-color: #DC143C;
-        padding: 4px 8px;
-        border-radius: 4px;
-        margin: 20px 0 0 30px;
-        @include linkTextWhite;
-        @include hvOpacity;
-      }
     }
   }
   &__right {
@@ -82,6 +100,12 @@
     padding: 12px 0 0 20px;
     &__posts__box{
       margin-bottom: 15px;
+    }
+    &__posts{
+      display: none;
+    }
+    &__likes{
+      display: none;
     }
     .pagination-box {
       text-align: left;

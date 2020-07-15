@@ -1,4 +1,8 @@
-= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
-  = form.text_field :keyword, placeholder: "Search for posts", class: "search-input"
-  = form.submit "Search", class: "search-btn"
+-# プルダウンに検索フォーム実装のためコメントアウト
+-# -# = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
+-# -#   = form.text_field :keyword, placeholder: "Search for posts", class: "search-input"
+-# -#   = form.submit "Search", class: "search-btn"
+
+.likeRankTitle
+  Recent Posts
 = render "posts/index"

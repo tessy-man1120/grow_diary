@@ -3,11 +3,18 @@
     = link_to "My Grow Diary", root_path, class: "header__title--text"
   .header__right
     - if user_signed_in?
+      = icon("fas", "search", class: "headOpen")
       = link_to "@#{current_user.nickname}", user_path(current_user), class: "header__right--btn"
-      = link_to "TAGS", tags_path, class: "header__right--btn"
-      = link_to "ALLPOSTS", posts_path, class: "header__right--btn"
-      = link_to "NEWPOST", new_post_path, class: "header__right--btn"
+      = link_to "NEW POST", new_post_path, class: "header__right--btn"
     - else
-      = link_to "ALLPOSTS", posts_path, class: "header__right--btn"
+      = icon("fas", "search", class: "headOpen")
       = link_to "LOGIN", new_user_session_path, class: "header__right--btn"
       = link_to "SIGN UP", new_user_registration_path, class: "header__right--btn"
+.headMenus
+  = form_with(url: search_posts_path, local: true, method: :get, class: "hdsearch-form") do |form|
+    = form.text_field :keyword, placeholder: "Search Post", class: "hdsearch-input"
+    -# = form.submit "fas-search", class: "hdsearch-btn"
+    %input{type: "submit", style:"display:none;"}
+    = link_to "All", posts_path, class: "headMenuBtn"
+    = link_to "Like", rank_posts_path, class:"headMenuBtn"
+    = link_to "Tag", tags_path, class: "headMenuBtn"
