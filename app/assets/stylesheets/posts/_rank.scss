@@ -1,0 +1,23 @@
+.likeRankTitle{
+  width: 80%;
+  margin: auto;
+  font-size: 28px;
+  font-weight: bold;
+  border-bottom: 1px solid #757575;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.rankingLike{
+  text-align: center;
+  margin: auto;
+
+  .toplikedLink{
+    @include btnBlue;
+    @include hvOpacity;
+    text-decoration: none;
+    font-style: 20px;
+    padding: 5px 10px;
+  }
+}

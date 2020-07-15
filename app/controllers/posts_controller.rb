@@ -50,6 +50,10 @@ class PostsController < ApplicationController
     # end
   end
 
+  def rank
+    @ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :text, :image, tag_ids: []).merge(user_id: current_user.id)

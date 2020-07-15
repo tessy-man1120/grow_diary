@@ -1,3 +1,5 @@
+.rankingLike
+  = link_to "Top Liked Posts", rank_posts_path, class:"toplikedLink"
 .contents
   - @posts.each do |post|
     .content
@@ -19,3 +21,6 @@
             = post.comments.count
   .pagination-box
     = paginate(@posts)
+
+
+
