@@ -98,8 +98,12 @@
     width: 60%;
     margin-left: 50px;
     padding: 12px 0 0 20px;
+    h2 {
+      font-weight: bold;
+    }
     &__posts__box{
       margin-bottom: 15px;
+      
     }
     &__likes{
       display: none;
@@ -108,12 +112,13 @@
       text-align: left;
     }
       .postTitle {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
         @include linkTextBlack;
         @include hvBlue;
       }
       .postUser {
+        font-size: 16px;
         @include linkTextBlack;
         @include hvBlue;
       }

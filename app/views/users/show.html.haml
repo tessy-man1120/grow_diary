@@ -23,7 +23,8 @@
           = simple_format @user.profile
   .userPage__contents__right
     .userPage__contents__right__posts
-      %h2 My Posts
+      %h2.far.fa-user 
+        = "#{@user.nickname}  's Post"
       - @posts.each do |post|
         .userPage__contents__right__posts__box
           .userPage__content__right__posts__box--title
@@ -36,7 +37,8 @@
               = post.comments.count
     .userPage__contents__right__likes
       .userPage__contents__right__posts
-      %h2 Liked Posts
+      %h2.far.fa-thumbs-up 
+        = "Liked Posts"
       - @likes.each do |like|
         .userPage__contents__right__posts__box
           .userPage__content__right__posts__box--title
