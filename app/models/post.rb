@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   validates :title, presence: true
-  
+  validates :text, inclusion: { in: %w( script )}, presence: true
+
   belongs_to :user
   has_many :comments
   has_many :post_tag_relations, dependent: :destroy
