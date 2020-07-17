@@ -1,5 +1,6 @@
-.edit-sign-box
-  %h2 While editing...
+.breadCrumb
+  - breadcrumb :editPost,@post
+  = breadcrumbs separator: " &rsaquo; "
 = form_with model: @post, class: :form, local: true do |form|
   = form.text_field :title, placeholder: :"Title", class: :form__title
   = form.text_area :text, placeholder: :"Text", class: :form__text

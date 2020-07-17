@@ -3,36 +3,51 @@ crumb :root do
 end
 
 crumb :mypage do
-  link "Profiles", user_path(current_user)
+  link "Profile", user_path(current_user)
   parent :root
 end
 
 crumb :editUser do |user|
-  link "EditProfile", edit_user_registration_path
+  link "Edit Profile", edit_user_registration_path
   parent :mypage, user
 end
 
-crumb :newPost do |post|
+crumb :newPost do
   link "NewPost", new_post_path
-  parent :root, post
+  parent :root
 end
 
-crumb :allPost do |post|
+crumb :allPost do
   link "AllPost", posts_path
-  parent :root, post
+  parent :root
 end
 
-crumb :topLikedPost do |post|
+crumb :showPost do |post|
+  link post.title, post_path(post)
+  parent :allPost
+end
+
+crumb :editPost do |post|
+  link "EditPost", edit_post_path
+  parent :showPost, post
+end
+
+crumb :searchPost do
+  link "Search Result", search_posts_path
+  parent :allPost
+end
+
+crumb :topLikedPost do
   link "TopLiked", rank_posts_path
-  parent :allPost, post
+  parent :allPost
 end
 
-crumb :tags do |post|
-  link "Tags", rank_posts_path
-  parent :allPost, post
+crumb :tags do
+  link "Tags", tags_path
+  parent :allPost
 end
 
-crumb :tagsShowPost do |post|
-  link "TagPosts", tag_path(tag.id)
-  parent :tags, post
+crumb :tagsShowPost do |t|
+  link "#{t.name} Posts", tag_path(tag.id)
+  parent :tags, t
 end

@@ -1,3 +1,6 @@
+.breadCrumb
+  - breadcrumb :showPost, @post
+  = breadcrumbs separator: " &rsaquo; "
 .postShow-contents
   - if @post.image?
     .postImage
