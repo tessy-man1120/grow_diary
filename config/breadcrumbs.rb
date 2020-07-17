@@ -3,7 +3,7 @@ crumb :root do
 end
 
 crumb :mypage do
-  link "Profile", user_path(current_user)
+  link "Profile", user_path
   parent :root
 end
 
