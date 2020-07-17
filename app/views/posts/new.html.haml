@@ -1,3 +1,6 @@
+.breadCrumb
+  - breadcrumb :newPost
+  = breadcrumbs separator: " &rsaquo; "
 = form_with model: @post, class: :form, local: true do |form|
   = form.text_field :title, placeholder: :"Title", class: :form__title
   = form.text_area :text, placeholder: :"Please enter the text", class: :form__text

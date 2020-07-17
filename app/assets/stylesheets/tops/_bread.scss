@@ -1,0 +1,10 @@
+.breadCrumb{
+  margin-left: 150px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  a {
+    @include linkTextBlack;
+    @include hvBlue;
+  }
+}

@@ -1,3 +1,6 @@
+.breadCrumb
+  - breadcrumb :editUser
+  = breadcrumbs separator: " &rsaquo; "
 .content-title
   Edit Profiles
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|

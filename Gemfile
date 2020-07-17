@@ -90,3 +90,5 @@ gem "kaminari"
 
 gem "redcarpet", "~> 2.3.0"
 gem 'rouge'
+
+gem 'gretel'
