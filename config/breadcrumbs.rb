@@ -2,9 +2,13 @@ crumb :root do
   link "Top", root_path
 end
 
-crumb :mypage do
-  link "Profile", user_path
-  parent :root
+crumb :mypage do |user|
+  if user_signed_in? 
+    link "Profile", user_path(current_user)
+  else 
+    link "Profile", user_path
+  parent :root, user
+  end
 end
 
 crumb :editUser do |user|
