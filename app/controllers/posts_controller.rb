@@ -39,19 +39,16 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path, alert: "Success post delete"
+    redirect_to posts_path, notice: "Success post delete"
   end
 
   def search
     @posts = Post.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(10)
-    # respond_to do |format|
-    #   format.html
-    #   format.json
-    # end
   end
 
   def rank
-    @ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
+    @ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').pluck(:post_id))
+    @ranks = Kaminari.paginate_array(@ranks).page(params[:page]).per(10)
   end
 
   private

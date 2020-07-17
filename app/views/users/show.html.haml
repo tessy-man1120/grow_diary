@@ -35,6 +35,8 @@
               = post.likes.count
             %i.far.fa-comment
               = post.comments.count
+      -# .pagination-box
+      -#   = paginate(@posts)
     .userPage__contents__right__likes
       .userPage__contents__right__posts
       %h2.far.fa-thumbs-up 
@@ -51,6 +53,4 @@
               = like.post.likes.count
             %i.far.fa-comment
               = like.post.comments.count
-    .pagination-box
-      = paginate(@posts)
 
