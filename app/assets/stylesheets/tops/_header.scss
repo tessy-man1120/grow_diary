@@ -19,29 +19,9 @@
     }
   }
   .humbergerMenu{
-    .global-nav{
-      position: fixed;
-      right: 20px;
-      top: 35px;
-    }
     line-height: 100px;
     font-weight: bold;
     font-size: 30px;
-    position: fixed;
-    right: 0;
-    top: 100px;
-    .menu{
-      background-color: $black;
-      display: none;
-      font-size: 20px;
-      .humbergerList {
-        text-decoration: none;
-        color: $white;
-        text-align: center;
-        margin: auto;
-        padding:0 10px;
-      }
-  }
   }
   &__right{
     &--btn{
@@ -78,4 +58,20 @@
     @include hvOpacity;
   }
 }
-
+// レスポンシブメニューバー
+.menu{
+  background-color: $black;
+  display: none;
+  opacity: 0.8;
+  text-align: center;
+  .humbergerList {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
+    @include hvOpacity;
+  }
+}

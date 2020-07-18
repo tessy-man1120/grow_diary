@@ -1,7 +1,8 @@
 %header.header
   .header__title
     = link_to "My Grow Diary", root_path, class: "header__title--text"
-  = render "top/humberger"
+  .humbergerMenu
+    = icon("fas", "bars", class:"global-nav")
   .header__right
     - if user_signed_in?
       = icon("fas", "search", class: "headOpen")
@@ -18,3 +19,4 @@
     = link_to "All", posts_path, class: "headMenuBtn"
     = link_to "Like", rank_posts_path, class:"headMenuBtn"
     = link_to "Tag", tags_path, class: "headMenuBtn"
+= render "top/humberger"

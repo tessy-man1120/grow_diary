@@ -1,4 +1,4 @@
-@media screen and(max-width: 750px){
+@media screen and(max-width: 560px){
   .header__right,
   .breadcrumbs {
     display: none;
@@ -23,7 +23,8 @@
     display: none;
   }
 }
-@media screen and(min-width: 750px){
+
+@media screen and(min-width: 560px){
   .humbergerMenu{
     display: none;
   }
