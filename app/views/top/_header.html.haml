@@ -1,6 +1,7 @@
 %header.header
   .header__title
     = link_to "My Grow Diary", root_path, class: "header__title--text"
+  = render "top/humberger"
   .header__right
     - if user_signed_in?
       = icon("fas", "search", class: "headOpen")
@@ -13,7 +14,6 @@
 .headMenus
   = form_with(url: search_posts_path, local: true, method: :get, class: "hdsearch-form") do |form|
     = form.text_field :keyword, placeholder: "Search Post", class: "hdsearch-input"
-    -# = form.submit "fas-search", class: "hdsearch-btn"
     %input{type: "submit", style:"display:none;"}
     = link_to "All", posts_path, class: "headMenuBtn"
     = link_to "Like", rank_posts_path, class:"headMenuBtn"

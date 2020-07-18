@@ -8,3 +8,9 @@ $(function () {
   });
 });
 
+// ハンバーガーメニュー
+$(function () {
+  $('.global-nav').on('click', () => {
+      $('.menu').slideToggle();
+  });
+});

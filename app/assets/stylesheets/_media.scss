@@ -1,0 +1,30 @@
+@media screen and(max-width: 760px){
+  .header__right,
+  .breadcrumbs {
+    display: none;
+  }
+  .header__title{
+    margin: auto;
+  }
+  .main-contents{
+    display: flex;
+    flex-direction: column;
+    .lessonsOne,
+    .lessonsTwo{
+      display: flex;
+      flex-direction: column;
+      &__item{
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+  }
+  .global-navi{
+    display: none;
+  }
+}
+@media screen and(min-width: 760px){
+  .humbergerMenu{
+    display: none;
+  }
+}
