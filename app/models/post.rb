@@ -1,6 +1,9 @@
 class Post < ApplicationRecord
   validates :title, presence: true
-  validates :text, exclusion: { in: %w( script )}, presence: true
+  validates :text, presence: true
+
+  # validates :text, format: { with: ^(?!.*script).*$ }, presence: true
+
 
   belongs_to :user
   has_many :comments
