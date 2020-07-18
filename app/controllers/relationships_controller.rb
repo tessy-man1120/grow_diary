@@ -12,7 +12,7 @@ class RelationshipsController < ApplicationController
   def unfollow
     current_user.unfollow(params[:id])
     @user = User.find(params[:id])
-    redirect_to user_path(@user), alert:"Followed canceled"
+    redirect_to user_path(@user), notice:"Followed canceled"
   end
 
 end

@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
   def destroy
     Comment.find_by(id: params[:id],post_id: params[:post_id]).destroy
-    redirect_to post_path(params[:post_id]), alert: "Success comment delete"
+    redirect_to post_path(params[:post_id]), notice: "Success comment delete"
   end
 
   private

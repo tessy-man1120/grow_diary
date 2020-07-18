@@ -11,7 +11,7 @@ class LikesController < ApplicationController
   def destroy
     @like = Like.find_by(user_id: current_user.id, post_id: params[:post_id])
     if @like.destroy
-      redirect_to "/posts/#{params[:post_id]}", alert:"
+      redirect_to "/posts/#{params[:post_id]}", notice:"
       Like canceled"
     end
   end
