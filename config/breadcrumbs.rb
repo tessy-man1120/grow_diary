@@ -55,3 +55,23 @@ crumb :tagsShowPost do |t|
   link "#{t.name} Posts", tag_path(tag.id)
   parent :tags, t
 end
+
+crumb :groups do
+  link "Groups", groups_path
+  parent :root
+end
+
+crumb :groupNew do
+  link "Create Group"
+  parent :groups
+end
+
+crumb :groupShow do |g|
+  link "#{g.name}", group_path(g.id)
+  parent :groups, g
+end
+
+crumb :groupEdit do |g|
+  link "Edit"
+  parent :groupShow, g
+end

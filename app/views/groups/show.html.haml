@@ -1,4 +1,7 @@
-.likeRankTitle
+.breadCrumb
+  - breadcrumb :groupShow, @group
+  = breadcrumbs separator: " &rsaquo; "
+.templateTitle
   = @group.name
 .contents
   .groupMember

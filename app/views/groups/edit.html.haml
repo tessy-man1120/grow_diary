@@ -1,4 +1,7 @@
+.breadCrumb
+  - breadcrumb :groupEdit, @group
+  = breadcrumbs separator: " &rsaquo; "
 .groupWrapper
-  .likeRankTitle
+  .templateTitle
     Edit Group
   = render partial: 'form', locals: { group: @group }

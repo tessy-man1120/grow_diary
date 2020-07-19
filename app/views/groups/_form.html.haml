@@ -6,12 +6,12 @@
         %li= message
   .groupForm__field
     .groupForm__field--left
-      = f.label :name, class: 'chat-group-form__label'
+      = f.label :name, class: 'group-form__label'
     .groupForm__field--right
-      = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'Input Group Name'
+      = f.text_field :name, class: 'group-form__input', placeholder: 'Input Group Name'
     .groupForm__field--left
-      %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} Group Member
+      %label.chat-group-form__label{:for => "group"} Group Member
     .groupForm__field--right
       = f.collection_check_boxes :user_ids, User.all, :id, :nickname
   .groupForm__field
-    = f.submit class: 'chat-group-form__action-btn'
+    = f.submit class: 'group-form__action-btn'
