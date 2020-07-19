@@ -1,0 +1,26 @@
+.pagination-box {
+  text-align: center;
+  margin: 20px 0;
+  .pagination {
+    height: 100px;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Silom',sans-serif;
+    a {
+      background-color: $white;
+      @include linkTextBlack;
+      @include hvOpacity;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid $gray;
+      margin:0 5px;
+    }
+    .current {
+      color: $white;
+      background: $blue;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid $gray;
+    }
+  }
+  }

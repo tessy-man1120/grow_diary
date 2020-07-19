@@ -1,0 +1,72 @@
+.about {
+  background-image: url("https://more-hikkoshi.com/wp-content/uploads/2015/04/img_noce00.png");
+  background-size: auto;
+  .cover {
+  height: 280px;
+  width: 100%;
+  opacity: 0.8;
+  background-color: $gray;
+  }
+}
+.contentIntro {
+  font-family: 'Silom',sans-serif;
+  display: flex;
+  height: 500px;
+  width: 80%;
+  margin: 20px auto 0 auto;
+  p {
+    font-size: 14px;
+  }
+  &__aboutMe {
+    width: 50%;
+    text-align: center;
+    .myImage {
+      width: 200px;
+      height: 200px;
+      border-radius: 50px;
+      opacity: 0.9;
+    }
+    &--link{
+      font-size: 40px;
+      margin: auto;
+      .link-insta{
+        @include linkTextBlack;
+        @include hvBlue;
+      }
+      .link-twitter{
+        @include linkTextBlack;
+        margin-left: 20px;
+        @include hvBlue;
+      }
+    }
+  }
+  &__git {
+    width: 50%;
+    text-align: center;
+    &--icon{
+      height: 200px;
+      font-size: 150px;
+    }
+    .github-link {
+      @include linkTextGray;
+      transition: all 0.1s;
+      &:hover {
+        color: $black;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+.company {
+  font-family: 'Silom',sans-serif;
+  width: 100%;
+  margin-top: 80px;
+  background-color: $black;
+  .company-logo {
+    @include lineHeight;
+    text-align: center;
+    color: $white;
+    transition: all 0.5s;
+    @include hvBlue;
+  }
+}

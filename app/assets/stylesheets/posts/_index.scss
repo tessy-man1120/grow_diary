@@ -83,12 +83,3 @@
     @include hvBlue;
   }
 }
-
-// ページネーション
-.pagination-box {
-  text-align: center;
-  margin: 20px 0;
-  .pagination {
-    @include linkTextBlack;
-  }
-}
