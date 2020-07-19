@@ -1,0 +1,16 @@
+.likeRankTitle
+  = @group.name
+.contents
+  .groupMember
+    - @group.users.each do |user|
+      .content
+        .content__left
+          - if user.image?
+            = image_tag "#{user.image}", class:"small-icon"
+          - else
+            = icon("far", "laugh", class: "small-default-icon")
+        .content__right
+          .content__right__user
+          = link_to "@#{user.nickname}", user_path(user), class: "groupUserName"
+          .content__right__prof
+            

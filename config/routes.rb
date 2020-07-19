@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show] 
+  resources :groups
   resources :tags, only: [:index, :show] do
     get 'posts', to: 'posts#show'
   end
