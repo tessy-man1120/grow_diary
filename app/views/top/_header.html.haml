@@ -7,7 +7,7 @@
     - if user_signed_in?
       = icon("fas", "search", class: "headOpen")
       = link_to "@#{current_user.nickname}", user_path(current_user), class: "header__right--btn"
-      -# = link_to "Groups", groups_path, class: "header__right--btn"
+      = link_to "Groups", groups_path, class: "header__right--btn"
       = link_to "NEW POST", new_post_path, class: "header__right--btn"
     - else
       = icon("fas", "search", class: "headOpen")

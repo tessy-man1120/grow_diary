@@ -12,10 +12,10 @@
       .modalWrapper
         .modalContents
           %h3 グループに参加にはオーナーの承認が必要です。
-          %strong ※こちらの機能に関しては現在作成途中でございます。
+          %strong ※こちらの機能に関しては作成中でございます。
           %br
-          %p 下記よりオーナーへリクエストを送信してください。
-          %button Entry Group
+          %br
+          = link_to "Entry Group", :back, class:"entryGroup-btn"
           #closeModal.closeModal
             ×
     - if user_signed_in? == @group.users.include?(current_user)

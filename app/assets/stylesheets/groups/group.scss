@@ -80,3 +80,28 @@
     @include hvBlue;
   }
 }
+.entryGroup-btn {
+  background-color: $blue;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  @include linkTextWhite;
+  @include hvOpacity;
+}
+
+// ↓----------グループ編集----------↓
+.groupDelete {
+  width: 25%;
+  background-color: $red;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: $white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px auto;
+  @include hvOpacity;
+  &--btn{
+    @include linkTextWhite;
+  }
+}

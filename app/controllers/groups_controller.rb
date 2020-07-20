@@ -31,6 +31,8 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    @group.destroy
+    redirect_to group_path, notice: "Success group delete"
   end
   
   def show

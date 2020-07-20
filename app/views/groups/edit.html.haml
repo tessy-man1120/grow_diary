@@ -5,3 +5,5 @@
   .templateTitle
     Edit Group
   = render partial: 'form', locals: { group: @group }
+  -# .groupDelete
+  -#   = link_to "Delete Group", group_path(@group.id), method: :delete, class: "groupDelete--btn"
