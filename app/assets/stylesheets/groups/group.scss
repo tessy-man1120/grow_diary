@@ -1,3 +1,4 @@
+// ↓----------グループ一覧----------↓
 .groupWrapper{
   width: 80%;
   margin: auto;
@@ -20,9 +21,9 @@
       }
     }
   }
-  .newGroup{
+  .groupLinkNew {
     margin: 100px 0;
-    .linkNewGroup{
+    &--btn {
       text-decoration: none;
       color: $white;
       background-color: $blue;
@@ -31,25 +32,51 @@
       @include hvOpacity;
     }
   }
-  .chat-group-form__action-btn{
-    background-color: $blue;
+}
+// ↓----------グループ新規登録----------↓
+.groupForm__field--btn{
+  margin-top: 50px;
+  text-decoration: none;
+  color: $white;
+  background-color: $blue;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid $blue;
+  @include hvOpacity;
+}
+// ↓----------グループ詳細----------↓
+.groupMenu{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  &--join{
+    background-color: $gray;
     border-radius: 4px;
+    padding: 10px 20px;
     color: $white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    @include hvOpacity;
+  }
+  &--edit{
+    background-color: $red;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    @include hvOpacity;
+    &--text{
+      @include linkTextWhite;
+    }
   }
 }
-
-// ↓----------グループ一覧画面----------↓
-
-
-// ↓----------グループ詳細画面----------↓
 .groupMember{
   .groupUserName{
     font-weight: bold;
     @include linkTextBlack;
     @include hvBlue;
-  }
-  #text {
-    width: 80%;
-    height: 80%;
   }
 }

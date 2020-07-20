@@ -4,7 +4,25 @@
 .templateTitle
   = @group.name
 .contents
+  .groupMenu
+    .groupMenu--join
+      Join a group
+    %section#modalArea.modalArea
+      #modalBg.modalBg
+      .modalWrapper
+        .modalContents
+          %h3 グループに参加にはオーナーの承認が必要です。
+          %strong ※こちらの機能に関しては現在作成途中でございます。
+          %br
+          %p 下記よりオーナーへリクエストを送信してください。
+          %button Entry Group
+          #closeModal.closeModal
+            ×
+    - if user_signed_in? == @group.users.include?(current_user)
+      .groupMenu--edit
+        = link_to "Edit group", edit_group_path(@group.id), class:"groupMenu--edit--text"
   .groupMember
+    %h3 Member
     - @group.users.each do |user|
       .content
         .content__left
@@ -16,4 +34,5 @@
           .content__right__user
           = link_to "@#{user.nickname}", user_path(user), class: "groupUserName"
           .content__right__prof
+    
             

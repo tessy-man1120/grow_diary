@@ -1,12 +1,3 @@
-// -----簡単ログインモダール----------
-$(function () {
-  $('.regBtn').click(function(){
-      $('#modalArea').fadeIn();
-  });
-  $('#closeModal , #modalBg').click(function(){
-    $('#modalArea').fadeOut();
-  });
-});
 // -----ファッシュメッセージ----------
 $(function(){
   setTimeout("$('.notice, .alert').fadeOut('slow')", 1000) 
