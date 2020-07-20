@@ -20,6 +20,11 @@ class GroupsController < ApplicationController
   end
 
   def edit
+    if user_signed_in? == @group.users.include?(current_user)
+      render "edit"
+    else
+      redirect_to root_path, alert: 'Warning! Do not enter directly'
+    end
   end
 
   def update

@@ -30,6 +30,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+    if @post.user == current_user
+      render "edit"
+    else
+      redirect_to root_path, alert: 'Warning! Do not enter directly'
+    end
   end
 
   def update
