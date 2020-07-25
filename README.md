@@ -52,9 +52,9 @@ AWS（EC2, S3, Route 53）
 Git, Github  
 Nginx, Unicorn
 
-## Database design
+## Database design  
 
-<img width="622" alt="スクリーンショット 2020-07-11 20 45 30" src="https://user-images.githubusercontent.com/64174311/87223382-7f46cf80-c3b7-11ea-8d0f-e15732e3a061.png">
+<img width="581" alt="スクリーンショット 2020-07-22 19 55 57" src="https://user-images.githubusercontent.com/64174311/88168522-84c4d500-cc55-11ea-94bb-753aa6b7f9a9.png">
 
 ## 課題、今後実装したい機能
 
