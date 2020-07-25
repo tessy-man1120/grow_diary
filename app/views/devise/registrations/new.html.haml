@@ -6,7 +6,7 @@
         = render "devise/shared/error_messages", resource: resource
         .signup-field
           = f.label :nickname, class:"user-login-sentence"
-          = f.text_field :nickname, placeholder:"15 characters maximum", autofocus: true, autocomplete: "nickname"
+          = f.text_field :nickname, placeholder:"10 characters maximum", autofocus: true, autocomplete: "nickname"
         .signup-field
           = f.label :email, class:"user-login-sentence"
           = f.email_field :email, placeholder:"aaa@gmail.com", autofocus: true, autocomplete: "email"

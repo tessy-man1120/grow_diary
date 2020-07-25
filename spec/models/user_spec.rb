@@ -45,15 +45,15 @@ describe User do
       expect(user.errors[:password]).to include("は6文字以上に設定して下さい。")
     end
 
-    it " nicknameが15文字以下であれば登録できること " do
+    it " nicknameが10文字以下であれば登録できること " do
       user = build(:user, nickname: "testman")
       expect(user).to be_valid
     end
 
     it " nicknameが15文字以上であれば登録できないこと " do
-      user = build(:user, nickname: "testman890123456")
+      user = build(:user, nickname: "testman8901")
       user.valid?
-      expect(user.errors[:nickname]).to include("は15文字以下に設定して下さい。")
+      expect(user.errors[:nickname]).to include("は10文字以下に設定して下さい。")
     end
 
 
