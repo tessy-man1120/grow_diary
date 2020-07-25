@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :move_to_index, except: [:index, :show, :search, :rank]
+  before_action :move_to_index, except: [:index, :show, :search, :rank]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
