@@ -27,9 +27,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   redirect_to user_path(current_user)
-  # end
+  def update
+    redirect_to user_path(current_user), notice: 'Success!! Changed Your Profiles'
+  end
 
   # DELETE /resource
   # def destroy
