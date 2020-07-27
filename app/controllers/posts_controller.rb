@@ -6,6 +6,13 @@ class PostsController < ApplicationController
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(10)
   end
 
+  def show
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
+    @comment_count = Comment.where(post_id: @post.id).count
+    @like_count = Like.where(post_id: @post.id).count
+  end
+
   def new
     @post = Post.new
     if @post.save
@@ -22,13 +29,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
-    @comment = Comment.new
-    @comments = @post.comments.includes(:user)
-    @comment_count = Comment.where(post_id: @post.id).count
-    @like_count = Like.where(post_id: @post.id).count
-  end
-
   def edit
     if @post.user == current_user
       render "edit"
@@ -38,8 +38,11 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update(post_params)
-    redirect_to posts_path(@post.id), notice: "Success post update"
+    if @post.update(post_params)
+      redirect_to posts_path(@post.id), notice: "Success post update"
+    else
+      redirect_to edit_post_path, alert:"Failed update post"
+    end
   end
 
   def destroy
