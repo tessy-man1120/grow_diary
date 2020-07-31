@@ -12,6 +12,8 @@
         = icon("far", "laugh", class: "default-icon")
     .userPage__contents__left__userInfo
       = render "relationships/follow_button", user:@user
+      .userPage__contents__left__userInfo--group
+        = link_to "Groups: ✖︎✖︎", groups_path, class: "userInfo-groups"
       .userPage__contents__left__currentUser--box
       - if user_signed_in? && current_user.id == @user.id
         .userPage__contents__left__userInfo--show

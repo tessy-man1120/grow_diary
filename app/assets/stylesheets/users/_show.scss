@@ -47,6 +47,17 @@
           @include hvBlue;
         }
       }
+      &--group {
+        .userInfo-groups {
+          width: 150px;
+          margin: 20px 0;
+          display: block;
+          cursor: pointer;
+          font-weight: bold;
+          @include linkTextBlack;
+          @include hvBlue;
+        }
+      }
       &--show {
         display: flex;
         margin-bottom: 20px;
