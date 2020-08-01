@@ -47,6 +47,8 @@ jQuery/JavaScript
 Ruby 2.5.1  
 Ruby on Rails 5.2.4.3  
 npm 6.14.5  
+RuboCop  
+Rspec  
 MySQL  
 AWS（EC2, S3, Route 53）  
 Git, Github  
