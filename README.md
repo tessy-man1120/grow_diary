@@ -51,6 +51,7 @@ RuboCop
 Rspec  
 MySQL  
 AWS（EC2, S3, Route 53）  
+Capistrano  
 Git, Github  
 Nginx, Unicorn
 
