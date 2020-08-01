@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show, :search, :rank]
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, except: %i[index show search rank]
+  before_action :set_post, only: %i[show edit update destroy]
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(10)
@@ -15,17 +15,15 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    if @post.save
-      redirect_to posts_path
-    end
+    redirect_to posts_path if @post.save
   end
 
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to posts_path, notice:"Success new post"
+      redirect_to posts_path, notice: "Success new post"
     else
-      redirect_to new_post_path, alert:"Failed new post"
+      redirect_to new_post_path, alert: "Failed new post"
     end
   end
 
@@ -41,7 +39,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to posts_path(@post.id), notice: "Success post update"
     else
-      redirect_to edit_post_path, alert:"Failed update post"
+      redirect_to edit_post_path, alert: "Failed update post"
     end
   end
 
@@ -60,6 +58,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :text, :image, tag_ids: []).merge(user_id: current_user.id)
   end
@@ -71,5 +70,4 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-
 end

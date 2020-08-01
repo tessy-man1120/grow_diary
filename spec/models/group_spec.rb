@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe Group do
   describe '#create' do
-
     it "nameがない場合は登録できないこと" do
       group = build(:group, name: nil)
       group.valid?
@@ -15,6 +14,5 @@ describe Group do
       another_group.valid?
       expect(another_group.errors[:name]).to include("は既に使用されています。")
     end
-
   end
 end

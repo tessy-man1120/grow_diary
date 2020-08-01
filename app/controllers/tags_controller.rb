@@ -1,5 +1,4 @@
 class TagsController < ApplicationController
-
   def index
     @tags = Tag.all
   end
@@ -8,6 +7,4 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     @post = @tag.posts.order("created_at DESC").page(params[:page]).per(10)
   end
-
 end
-

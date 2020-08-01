@@ -1,7 +1,5 @@
 class TopController < ApplicationController
-
-  def index
-  end
+  def index; end
 
   def new_guest
     user = User.guest

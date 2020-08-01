@@ -3,11 +3,11 @@ crumb :root do
 end
 
 crumb :mypage do |user|
-  if user_signed_in? 
+  if user_signed_in?
     link "Profile", user_path(current_user)
-  else 
+  else
     link "Profile", user_path
-  parent :root, user
+    parent :root, user
   end
 end
 
@@ -67,7 +67,7 @@ crumb :groupNew do
 end
 
 crumb :groupShow do |g|
-  link "#{g.name}", group_path(g.id)
+  link g.name.to_s, group_path(g.id)
   parent :groups, g
 end
 

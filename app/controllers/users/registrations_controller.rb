@@ -3,12 +3,10 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-  before_action :check_guest, only: [:update, :destroy]
+  before_action :check_guest, only: %i[update destroy]
 
   def check_guest
-    if resource.email == 'guest@example.com'
-      redirect_to user_path(current_user), alert: 'ゲストユーザーの変更・削除はできません。'
-    end
+    redirect_to user_path(current_user), alert: 'ゲストユーザーの変更・削除はできません。' if resource.email == 'guest@example.com'
   end
 
   # GET /resource/sign_up
@@ -23,7 +21,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/edit
   # def edit
-    # super
+  # super
   # end
 
   # PUT /resource
@@ -70,8 +68,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   protected
+
   def update_resource(resource, params)
     resource.update_without_password(params)
   end
-
 end

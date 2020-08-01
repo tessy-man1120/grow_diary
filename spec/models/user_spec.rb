@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe User do
   describe '#create' do
-
     it "nikcnameがない場合は登録できないこと" do
       user = build(:user, nickname: nil)
       user.valid?
@@ -55,11 +54,5 @@ describe User do
       user.valid?
       expect(user.errors[:nickname]).to include("は10文字以下に設定して下さい。")
     end
-
-
   end
 end
-
-
-
-

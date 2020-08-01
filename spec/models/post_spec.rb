@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe Post do
   describe '#create' do
-
     it "titleがない場合は登録できないこと" do
       post = build(:post, title: nil)
       post.valid?
@@ -14,6 +13,5 @@ describe Post do
       post.valid?
       expect(post.errors[:text]).to include("が入力されていません。")
     end
-
   end
 end

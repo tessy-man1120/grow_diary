@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :edit, :update, :destroy]
+  before_action :set_group, only: %i[show edit update destroy]
 
   def index
     @groups = Group.all
@@ -39,11 +39,11 @@ class GroupsController < ApplicationController
     @group.destroy
     redirect_to group_path, notice: "Success group delete"
   end
-  
-  def show
-  end
+
+  def show; end
 
   private
+
   def group_params
     params.require(:group).permit(:name, user_ids: [])
   end
@@ -51,5 +51,4 @@ class GroupsController < ApplicationController
   def set_group
     @group = Group.find(params[:id])
   end
-
 end
