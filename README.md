@@ -10,7 +10,7 @@ My Grow Diary
 
 ## APP URL
 
-<h3>http://mygrowdiary2020.site/</h3>
+<h3>https://mygrowdiary2020.site/</h3>
 
 **簡単ログインでゲストユーザーがご利用いただけます。**
 
