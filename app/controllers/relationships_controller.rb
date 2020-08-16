@@ -3,8 +3,7 @@ class RelationshipsController < ApplicationController
     current_user.follow(params[:id])
     @user = User.find(params[:id])
     if @user.save
-      redirect_to user_path(@user), notice: "
-      Followed successfully"
+      redirect_to user_path(@user), notice: "Followed successfully"
     end
   end
 
